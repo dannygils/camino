@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camino del Norte – Weather Tracker</title>
+  <style>
+    :root {
+      --bg:      #0f1117;
+      --surface: #1a1d27;
+      --border:  #2a2d3a;
+      --text:    #e8eaf0;
+      --muted:   #8892a4;
+      --accent:  #4f9cf9;
+      --green:   #27ae60;
+      --orange:  #e67e22;
+      --red:     #e74c3c;
+      --yellow:  #f1c40f;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 32px;
+    }
+    header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    header p  { color: var(--muted); font-size: 13px; }
+    .summary {
+      display: flex;
+      gap: 16px;
+      padding: 20px 32px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 20px;
+      min-width: 160px;
+    }
+    .stat-val  { font-size: 28px; font-weight: 700; }
+    .stat-label{ font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .table-wrap {
+      overflow-x: auto;
+      padding: 0 32px 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 820px;
+    }
+    th {
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    tr:hover td { background: rgba(255,255,255,.03); }
+    tr.past td  { opacity: .45; }
+    tr.today td { background: rgba(79,156,249,.08); }
+    tr.today .day-num { color: var(--accent); font-weight: 700; }
+    .day-num    { color: var(--muted); font-size: 12px; width: 52px; }
+    .town-name  { font-weight: 600; }
+    .date-col   { color: var(--muted); font-size: 12px; }
+    .badge-live {
+      background: rgba(39,174,96,.2);
+      color: #2ecc71;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid rgba(39,174,96,.4);
+    }
+    .badge-hist {
+      background: rgba(79,156,249,.12);
+      color: var(--accent);
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid rgba(79,156,249,.3);
+    }
+    .legend {
+      padding: 0 32px 32px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 2;
+    }
+    .legend span { margin-right: 24px; }
+    @media (max-width: 600px) {
+      header, .summary, .table-wrap, .legend { padding-left: 16px; padding-right: 16px; }
+      .stat { min-width: 130px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🥾 Camino del Norte – Weather Tracker</h1>
+    <p>Irún → Santiago de Compostela &nbsp;·&nbsp; Start date: June 01, 2027 &nbsp;·&nbsp; Last updated: 30 May 2026 15:39 UTC</p>
+  </header>
+
+  <div class="summary">
+    <div class="stat">
+      <div class="stat-val" style="color:var(--accent)">367</div>
+      <div class="stat-label">Days until start</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" style="color:var(--orange)">21</div>
+      <div class="stat-label">Stages with ≥40% rain chance</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" style="color:#e67e22">42%</div>
+      <div class="stat-label">Avg rain probability</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" style="color:var(--yellow)">
+        Bilbao
+      </div>
+      <div class="stat-label">Wettest stage (80% rain)</div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Town</th>
+          <th>Date</th>
+          <th>Temp (min–max)</th>
+          <th>Rain chance</th>
+          <th>Rainfall</th>
+          <th>Wind</th>
+          <th>Conditions</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr class="historical">
+          <td class="day-num">Day 0</td>
+          <td class="town-name">Irún</td>
+          <td class="date-col">2027-06-01</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="41" y="3" width="9" height="6" rx="3" fill="#e67e22"/></svg> 16°–20°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>1.5mm</td>
+          <td>22 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 1</td>
+          <td class="town-name">San Sebastián</td>
+          <td class="date-col">2027-06-02</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="42" y="3" width="7" height="6" rx="3" fill="#e67e22"/></svg> 17°–19°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>1.7mm</td>
+          <td>8 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 2</td>
+          <td class="town-name">Zarautz</td>
+          <td class="date-col">2027-06-03</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="36" y="3" width="18" height="6" rx="3" fill="#e67e22"/></svg> 14°–22°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(60%)</small></td>
+          <td>1.3mm</td>
+          <td>20 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 3</td>
+          <td class="town-name">Deba</td>
+          <td class="date-col">2027-06-04</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="39" y="3" width="22" height="6" rx="3" fill="#e67e22"/></svg> 16°–24°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>1.6mm</td>
+          <td>24 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 4</td>
+          <td class="town-name">Markina-Xemein</td>
+          <td class="date-col">2027-06-05</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="30" y="3" width="27" height="6" rx="3" fill="#e67e22"/></svg> 12°–23°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>2.6mm</td>
+          <td>27 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 5</td>
+          <td class="town-name">Gernika</td>
+          <td class="date-col">2027-06-06</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="33" y="3" width="18" height="6" rx="3" fill="#e67e22"/></svg> 13°–20°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(60%)</small></td>
+          <td>2.2mm</td>
+          <td>12 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 6</td>
+          <td class="town-name">Bilbao</td>
+          <td class="date-col">2027-06-07</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="33" y="3" width="18" height="6" rx="3" fill="#e67e22"/></svg> 13°–20°C</td>
+          <td><span style="color:#e74c3c;font-weight:600">High</span> <small style="color:#888">(80%)</small></td>
+          <td>5.4mm</td>
+          <td>12 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 7</td>
+          <td class="town-name">Pobeña</td>
+          <td class="date-col">2027-06-08</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="33" y="3" width="25" height="6" rx="3" fill="#e67e22"/></svg> 13°–23°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>6.5mm</td>
+          <td>26 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 8</td>
+          <td class="town-name">Castro Urdiales</td>
+          <td class="date-col">2027-06-09</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="36" y="3" width="26" height="6" rx="3" fill="#e67e22"/></svg> 14°–25°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>5.4mm</td>
+          <td>22 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 9</td>
+          <td class="town-name">Laredo</td>
+          <td class="date-col">2027-06-10</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="34" y="3" width="28" height="6" rx="3" fill="#e67e22"/></svg> 14°–25°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>5.7mm</td>
+          <td>13 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 10</td>
+          <td class="town-name">Güemes</td>
+          <td class="date-col">2027-06-11</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="31" y="3" width="31" height="6" rx="3" fill="#e67e22"/></svg> 12°–25°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>3.6mm</td>
+          <td>22 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 11</td>
+          <td class="town-name">Santa Cruz de Bezana</td>
+          <td class="date-col">2027-06-12</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="33" y="3" width="29" height="6" rx="3" fill="#e67e22"/></svg> 13°–25°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>6.6mm</td>
+          <td>11 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 12</td>
+          <td class="town-name">Santillana del Mar</td>
+          <td class="date-col">2027-06-13</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="34" y="3" width="24" height="6" rx="3" fill="#e67e22"/></svg> 14°–23°C</td>
+          <td><span style="color:#e74c3c;font-weight:600">High</span> <small style="color:#888">(80%)</small></td>
+          <td>3.9mm</td>
+          <td>18 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 13</td>
+          <td class="town-name">Comillas</td>
+          <td class="date-col">2027-06-14</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="36" y="3" width="26" height="6" rx="3" fill="#e67e22"/></svg> 15°–25°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>7.9mm</td>
+          <td>12 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 14</td>
+          <td class="town-name">Colombres</td>
+          <td class="date-col">2027-06-15</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="40" y="3" width="10" height="6" rx="3" fill="#e67e22"/></svg> 16°–20°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>3.5mm</td>
+          <td>18 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 15</td>
+          <td class="town-name">Llanes</td>
+          <td class="date-col">2027-06-16</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="36" y="3" width="8" height="6" rx="3" fill="#e67e22"/></svg> 14°–17°C</td>
+          <td><span style="color:#e74c3c;font-weight:600">High</span> <small style="color:#888">(80%)</small></td>
+          <td>0.7mm</td>
+          <td>19 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 16</td>
+          <td class="town-name">San Esteban de Leces</td>
+          <td class="date-col">2027-06-17</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="28" y="3" width="24" height="6" rx="3" fill="#e67e22"/></svg> 11°–21°C</td>
+          <td><span style="color:#e74c3c;font-weight:600">High</span> <small style="color:#888">(80%)</small></td>
+          <td>1.4mm</td>
+          <td>15 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 17</td>
+          <td class="town-name">Villaviciosa</td>
+          <td class="date-col">2027-06-18</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="36" y="3" width="24" height="6" rx="3" fill="#e67e22"/></svg> 14°–24°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>3.6mm</td>
+          <td>20 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 18</td>
+          <td class="town-name">Gijón</td>
+          <td class="date-col">2027-06-19</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="40" y="3" width="19" height="6" rx="3" fill="#e67e22"/></svg> 16°–24°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>7.2mm</td>
+          <td>8 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 19</td>
+          <td class="town-name">San Martín de Laspra</td>
+          <td class="date-col">2027-06-20</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="29" y="3" width="33" height="6" rx="3" fill="#e67e22"/></svg> 12°–25°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>3.8mm</td>
+          <td>8 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 20</td>
+          <td class="town-name">Soto de Luiña</td>
+          <td class="date-col">2027-06-21</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="33" y="3" width="14" height="6" rx="3" fill="#e67e22"/></svg> 13°–19°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>6.0mm</td>
+          <td>21 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 21</td>
+          <td class="town-name">Cadavedo</td>
+          <td class="date-col">2027-06-22</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="30" y="3" width="18" height="6" rx="3" fill="#e67e22"/></svg> 12°–19°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>5.8mm</td>
+          <td>26 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 22</td>
+          <td class="town-name">Piñera</td>
+          <td class="date-col">2027-06-23</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="38" y="3" width="11" height="6" rx="3" fill="#e67e22"/></svg> 15°–20°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>2.7mm</td>
+          <td>27 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 23</td>
+          <td class="town-name">Tapia de Casariego</td>
+          <td class="date-col">2027-06-24</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="38" y="3" width="22" height="6" rx="3" fill="#e67e22"/></svg> 15°–24°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>0.9mm</td>
+          <td>26 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 24</td>
+          <td class="town-name">Vilela</td>
+          <td class="date-col">2027-06-25</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="31" y="3" width="13" height="6" rx="3" fill="#e67e22"/></svg> 12°–18°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>6.4mm</td>
+          <td>21 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 25</td>
+          <td class="town-name">Mondoñedo</td>
+          <td class="date-col">2027-06-26</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="32" y="3" width="32" height="6" rx="3" fill="#e67e22"/></svg> 13°–26°C</td>
+          <td><span style="color:#f1c40f;font-weight:600">Low</span> <small style="color:#888">(20%)</small></td>
+          <td>5.7mm</td>
+          <td>21 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 26</td>
+          <td class="town-name">Castromaior</td>
+          <td class="date-col">2027-06-27</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="37" y="3" width="26" height="6" rx="3" fill="#e67e22"/></svg> 15°–25°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>1.8mm</td>
+          <td>27 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 27</td>
+          <td class="town-name">Baamonde</td>
+          <td class="date-col">2027-06-28</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="39" y="3" width="16" height="6" rx="3" fill="#e67e22"/></svg> 16°–22°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(60%)</small></td>
+          <td>7.3mm</td>
+          <td>26 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 28</td>
+          <td class="town-name">Sobrado dos Monxes</td>
+          <td class="date-col">2027-06-29</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="41" y="3" width="24" height="6" rx="3" fill="#e67e22"/></svg> 16°–26°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(60%)</small></td>
+          <td>0.2mm</td>
+          <td>13 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 29</td>
+          <td class="town-name">Arzúa</td>
+          <td class="date-col">2027-06-30</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="28" y="3" width="36" height="6" rx="3" fill="#e67e22"/></svg> 11°–25°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(40%)</small></td>
+          <td>7.5mm</td>
+          <td>20 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 30</td>
+          <td class="town-name">O Pedrouzo</td>
+          <td class="date-col">2027-07-01</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="36" y="3" width="26" height="6" rx="3" fill="#e67e22"/></svg> 14°–24°C</td>
+          <td><span style="color:#e67e22;font-weight:600">Moderate</span> <small style="color:#888">(60%)</small></td>
+          <td>2.2mm</td>
+          <td>10 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+        <tr class="historical">
+          <td class="day-num">Day 31</td>
+          <td class="town-name">Santiago de Compostela</td>
+          <td class="date-col">2027-07-02</td>
+          <td><svg width="100" height="12" style="vertical-align:middle"><rect x="0" y="3" width="100" height="6" rx="3" fill="#2a2a2a"/><rect x="33" y="3" width="31" height="6" rx="3" fill="#e67e22"/></svg> 13°–26°C</td>
+          <td><span style="color:#e74c3c;font-weight:600">High</span> <small style="color:#888">(80%)</small></td>
+          <td>7.9mm</td>
+          <td>22 km/h</td>
+          <td>—</td>
+          <td><span class="badge-hist">📊 Avg 2019-2023</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legend">
+    <span>🟢 <strong>Unlikely</strong> &lt;20%</span>
+    <span>🟡 <strong>Low</strong> 20–39%</span>
+    <span>🟠 <strong>Moderate</strong> 40–69%</span>
+    <span>🔴 <strong>High</strong> ≥70%</span>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <span>📡 <strong>Live forecast</strong> — real-time data from Open-Meteo</span>
+    <span>📊 <strong>Historical avg</strong> — 2019–2023 averages for this calendar date</span>
+  </div>
+
+</body>
+</html>

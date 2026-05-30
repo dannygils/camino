@@ -25,7 +25,7 @@ footwear:
     weight: medium
     notes: Merrell Moab or Salomon GTX popular choices. Waterproof recommended for Norte (lots of rain).
     packed:
-      Dan:
+      Dan: false # bringing hiking sandals 
       Matt:
       Joel:
       Pat:
@@ -36,7 +36,7 @@ footwear:
     weight: light
     notes: Lightweight camp sandals work well.
     packed:
-      Dan:
+      Dan: true # Cairn Evo 3D Sandals - https://www.rei.com/product/231068/bedrock-sandals-cairn-evo-3d-sandals 
       Matt:
       Joel:
       Pat:
