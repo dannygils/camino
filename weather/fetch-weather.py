@@ -15,7 +15,6 @@ import sys
 import os
 from datetime import date, timedelta, datetime, timezone
 from urllib.request import urlopen
-from urllib.parse import urlencode
 from urllib.error import URLError
 
 # ── Config ──────────────────────────────────────────────────────
@@ -112,15 +111,13 @@ def fetch_historical(lat, lon, month, day):
             d = date(year, month, day)
         except ValueError:
             continue  # skip Feb 29 in non-leap years
-        params = urlencode({
-            "latitude": lat,
-            "longitude": lon,
-            "start_date": str(d),
-            "end_date": str(d),
-            "daily": "temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max",
-            "timezone": "Europe/Madrid",
-        })
-        url = f"https://archive-api.open-meteo.com/v1/archive?{params}"
+        url = (
+            f"https://archive-api.open-meteo.com/v1/archive"
+            f"?latitude={lat}&longitude={lon}"
+            f"&start_date={d}&end_date={d}"
+            f"&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max"
+            f"&timezone=Europe/Madrid"
+        )
         data = fetch_json(url)
         if data and "daily" in data:
             daily = data["daily"]
@@ -135,12 +132,11 @@ def fetch_historical(lat, lon, month, day):
             if tmin is not None: all_tmin.append(tmin)
             if rain is not None: all_rain.append(rain)
             if wind is not None: all_wind.append(wind)
-        time.sleep(0.4)  # be polite to the API
+        time.sleep(0.4)
 
     def avg(lst):
         return round(sum(lst) / len(lst), 1) if lst else None
 
-    # Rain probability: fraction of years it rained (>1mm)
     rain_prob = round(100 * sum(1 for r in all_rain if r and r > 1.0) / len(CLIMATE_YEARS)) if all_rain else None
 
     return {
@@ -155,15 +151,13 @@ def fetch_historical(lat, lon, month, day):
 
 def fetch_forecast(lat, lon, target_date):
     """Fetch live forecast for a specific date (only works within 16 days)."""
-    params = urlencode({
-        "latitude": lat,
-        "longitude": lon,
-        "start_date": str(target_date),
-        "end_date": str(target_date),
-        "daily": "temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,windspeed_10m_max,weathercode",
-        "timezone": "Europe/Madrid",
-    })
-    url = f"https://api.open-meteo.com/v1/forecast?{params}"
+    url = (
+        f"https://api.open-meteo.com/v1/forecast"
+        f"?latitude={lat}&longitude={lon}"
+        f"&start_date={target_date}&end_date={target_date}"
+        f"&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,windspeed_10m_max,weathercode"
+        f"&timezone=Europe/Madrid"
+    )
     data = fetch_json(url)
     if not data or "daily" not in data:
         return None
