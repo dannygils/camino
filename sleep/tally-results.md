@@ -2,11 +2,11 @@
 
 _Last updated: 2026-05-30 15:07 UTC_
 
-**0** decided &nbsp;|&nbsp; **0** needs consensus &nbsp;|&nbsp; **32** no votes yet &nbsp;|&nbsp; **32** total stages
+**1** decided &nbsp;|&nbsp; **0** needs consensus &nbsp;|&nbsp; **31** no votes yet &nbsp;|&nbsp; **32** total stages
 
 | | Stage | Leading choice | Votes | Other votes |
 |---|---|---|---|---|
-| ⬜ | Start Irun | — | 0/5 |  |
+| ✅ | Start Irun | Suites Mendibil | 1/5 |  |
 | ⬜ | Day 01 Irun To San Sebastian | — | 0/5 |  |
 | ⬜ | Day 02 San Sebastian To Zarautz | — | 0/5 |  |
 | ⬜ | Day 03 Zarautz To Deba | — | 0/5 |  |
