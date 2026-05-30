@@ -1,0 +1,707 @@
+# Camino del Norte – Packing List
+# =================================
+# HOW TO USE:
+#   - Under each item, mark your name as: 
+#     true (bringing it) 
+#     false (not bringing it) 
+#     shared (happy to share)
+#     Include comments!  
+#
+#   - For shared items (first aid kit, etc.) only one person needs to bring it — coordinate here!
+#   - git add packing-list.yaml
+#   - git commit -m "packing: [your name] filled in"
+#   - git push
+#
+# WEIGHT GUIDE: ultralight (<100g), light (100-300g), medium (300-600g), heavy (600g+)
+# SOURCE: Based on Stingy Nomads Camino packing guide (stingynomads.com/camino-de-santiago-packing-list/)
+
+# ─────────────────────────────────────────
+# FOOTWEAR
+# ─────────────────────────────────────────
+footwear:
+
+  hiking_shoes:
+    description: Main walking shoe. Hiking shoes recommended over sneakers. Break them in before the trip.
+    weight: medium
+    notes: Merrell Moab or Salomon GTX popular choices. Waterproof recommended for Norte (lots of rain).
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  flip_flops_or_sandals:
+    description: For albergues, showers, and rest days. Essential for communal bathrooms.
+    weight: light
+    notes: Lightweight camp sandals work well.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  gaiters:
+    description: Optional but useful for muddy sections in Galicia and rainy days.
+    weight: ultralight
+    notes: Low gaiters only needed, not full mountaineering ones.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# SOCKS
+# ─────────────────────────────────────────
+socks:
+
+  merino_wool_hiking_socks:
+    description: 3 pairs strongly recommended. Merino wool prevents blisters and manages moisture far better than synthetic.
+    weight: light
+    notes: Danish Endurance and Darn Tough are highly rated. Do NOT use cotton socks.
+    quantity: 3 pairs each
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  liner_socks:
+    description: Optional thin inner socks worn under hiking socks to reduce friction and blisters.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# CLOTHING
+# ─────────────────────────────────────────
+clothing:
+
+  hiking_pants_or_shorts:
+    description: 1-2 pairs. Quick-dry, lightweight. Zip-off pants (convertible to shorts) very practical.
+    weight: light
+    notes: Avoid jeans — they're heavy, slow to dry, and cause chafing.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  hiking_shirts:
+    description: 2-3 quick-dry, moisture-wicking shirts. Merino wool or synthetic.
+    weight: light
+    notes: Merino resists odour better — good for multi-day wear between washes.
+    quantity: 2-3 each
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  underwear:
+    description: 2-3 pairs quick-dry. Merino wool or Ex Officio type.
+    weight: ultralight
+    quantity: 2-3 each
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  mid_layer_fleece_or_down:
+    description: Light fleece or packable down jacket. Evenings and mornings can be cold even in summer.
+    weight: light
+    notes: Packable down is ideal — compresses small. Norte gets cold in autumn.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  rain_jacket_or_poncho:
+    description: Essential on the Norte. The northern coast gets frequent rain.
+    weight: light
+    notes: >
+      Jacket preferred over poncho for active hiking — ponchos catch wind. 
+      Must be genuinely waterproof (Gore-Tex or similar), not just water resistant.
+      Doubles as a wind layer.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  pack_rain_cover:
+    description: Keeps your pack dry in rain. Some packs have one built in, check first.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  hat_sun:
+    description: Sun/cap hat for warm days. The Norte is exposed in sections.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  hat_warm:
+    description: Warm beanie for cold mornings and evenings.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  gloves:
+    description: Light gloves for early morning starts. Useful in autumn.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  sleep_clothes:
+    description: Light shorts/t-shirt for sleeping in albergues. Required in shared dorms.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# BACKPACK
+# ─────────────────────────────────────────
+pack:
+
+  main_backpack:
+    description: 20-35L for summer, 35-45L for autumn/winter. Bigger = more unnecessary stuff.
+    weight: medium
+    notes: >
+      20-24L discussed in planning meeting. 
+      Make sure it has a rain cover or buy separately.
+      Hip belt essential for comfort on long days.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  dry_bags_or_pack_liners:
+    description: Waterproof stuff sacks to keep gear dry inside the pack.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# SLEEP
+# ─────────────────────────────────────────
+sleep:
+
+  sleeping_bag_liner:
+    description: >
+      Lightweight silk or merino liner. Most albergues provide blankets but a liner is 
+      more hygienic and adds warmth. A full sleeping bag is overkill if staying in albergues.
+    weight: ultralight
+    notes: Silk liners pack very small. Useful for warm nights too.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  sleeping_bag:
+    description: Only needed if camping or staying in very basic albergues. Optional for this trip.
+    weight: medium
+    notes: Skip this if staying in albergues throughout — saves significant weight.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  earplugs:
+    description: Essential for albergue dorms. Snoring is universal.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  eye_mask:
+    description: Useful in albergues where lights go on early.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# GEAR
+# ─────────────────────────────────────────
+gear:
+
+  trekking_poles:
+    description: Highly recommended for the Norte — lots of steep ascents and descents.
+    weight: medium
+    notes: >
+      Discussed in planning meeting. Rubber tips for pavement sections.
+      Collapsible/foldable poles pack well. 
+      Black Diamond and Leki are popular brands.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  trekking_pole_rubber_tips:
+    description: Protects poles and quieter on road/pavement sections.
+    weight: ultralight
+    notes: Discussed in planning meeting.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  headlamp:
+    description: Essential for early morning starts before sunrise and navigating albergues at night.
+    weight: ultralight
+    notes: Bring spare batteries or use a USB rechargeable model.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  quick_dry_towel:
+    description: Compact microfibre towel. Most albergues do not provide towels.
+    weight: light
+    notes: Medium size sufficient. Dries within an hour.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  water_bottle_or_hydration:
+    description: 1-1.5L minimum. Water fountains on route but spacing can be long.
+    weight: light
+    notes: Soft flask saves space when not full. Hard bottle more durable.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  pilgrim_credential:
+    description: Pilgrim passport — gets stamped each day, required for Compostela certificate.
+    weight: ultralight
+    notes: Can get one at the start in Irún or order online before the trip. Everyone needs their own.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  small_padlock:
+    description: For albergue lockers. Many have lockers for valuables but no padlock provided.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  washing_bag:
+    description: Dry bag or small stuff sack for wet/dirty clothes. Discussed in planning meeting.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  clothes_line:
+    description: Lightweight travel washing line for drying clothes. Albergues have drying areas but lines fill up fast.
+    weight: ultralight
+    notes: A few clothes pegs useful too.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# ELECTRONICS
+# ─────────────────────────────────────────
+electronics:
+
+  phone:
+    description: Navigation (Maps.me or Camino app), photos, communication.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  power_bank:
+    description: Essential — charging points at albergues are competitive. 10,000mAh sufficient.
+    weight: medium
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  charging_cables:
+    description: Phone and any other device cables.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  eu_plug_adapter:
+    description: Spain uses Type C/F (European standard, 220V). US plugs need an adapter.
+    weight: ultralight
+    notes: One per person recommended — shared sockets in albergues.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  earphones:
+    description: For music, podcasts, calls. Useful for long stretches.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# TOILETRIES
+# ─────────────────────────────────────────
+toiletries:
+
+  sunscreen:
+    description: SPF 30+ minimum. Exposed coastal sections get intense sun in summer.
+    weight: light
+    notes: Can buy in Spain if flying carry-on only.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  insect_repellent:
+    description: Useful in forested and rural sections, especially Galicia in summer.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  toiletry_bag_basics:
+    description: Toothbrush, toothpaste, soap/shampoo (biodegradable), deodorant, razor.
+    weight: light
+    notes: Travel sizes only. Shampoo bars save weight and are TSA-friendly.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  hand_sanitiser:
+    description: Useful between towns and before eating on trail.
+    weight: ultralight
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  laundry_detergent:
+    description: Small travel sachets or a bar of laundry soap. Discussed in planning meeting.
+    weight: ultralight
+    notes: Many albergues have washing machines (coins needed). Bar soap doubles as hand wash.
+    shared: true  # only need 1-2 people to bring this
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# FIRST AID & MEDICAL  ← coordinate — don't all bring full kits
+# ─────────────────────────────────────────
+medical:
+  note: "Coordinate this section — between 5 people you only need 1-2 full kits. Mark shared: true if happy to share with the group."
+
+  blister_kit:
+    description: >
+      Most important medical item on any Camino. Compeed/moleskin blister plasters, 
+      needle, antiseptic wipe, medical tape (Leukotape recommended).
+    weight: ultralight
+    notes: Treat blisters immediately — don't walk on them.
+    shared: true
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  ibuprofen_and_paracetamol:
+    description: For muscle pain, inflammation, and general aches. Take ibuprofen with food.
+    weight: ultralight
+    shared: true
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  antihistamines:
+    description: Useful for insect bites, allergic reactions, or hay fever.
+    weight: ultralight
+    shared: true
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  rehydration_salts:
+    description: Electrolyte sachets for long hot days or upset stomach recovery.
+    weight: ultralight
+    shared: true
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  antidiarrheal_and_antacid:
+    description: Change of diet and water can cause stomach issues.
+    weight: ultralight
+    shared: true
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  small_scissors_or_nail_clippers:
+    description: Nail care is serious business on the Camino. Long toenails cause black nails.
+    weight: ultralight
+    shared: true
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  tensor_bandage:
+    description: For ankle support or knee wrapping if needed.
+    weight: light
+    shared: true
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  knee_support_brace:
+    description: Optional, personal need. Knees take a beating on steep descents.
+    weight: light
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  personal_prescription_meds:
+    description: Whatever you personally need. Bring more than enough plus a written prescription.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# DOCUMENTS & MONEY
+# ─────────────────────────────────────────
+documents:
+
+  passport:
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  travel_insurance_details:
+    description: Policy number, emergency number. Physical copy + phone copy.
+    notes: Discussed in planning meeting.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  spain_work_visa:
+    description: Required for remote working in Spain. Discussed in planning meeting — Joel to confirm status.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  cash_euros:
+    description: Many small albergues, bars, and shops are cash-only. Always have €20-40 on hand.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  bank_card_with_no_foreign_fees:
+    description: Wise, Charles Schwab, or similar. Spanish ATMs are widely available.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+# ─────────────────────────────────────────
+# OPTIONAL / NICE TO HAVE
+# ─────────────────────────────────────────
+optional:
+
+  trekking_gaiters:
+    description: Keeps mud and stones out of shoes on wet days in Galicia.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  lightweight_camp_towel_extra:
+    description: Second small towel for feet/blister care.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  journal_and_pen:
+    description: Many pilgrims keep a trail journal. Albergues often have stamp books.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  sunglasses:
+    description: Coastal glare and sun exposure on open sections.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  lip_balm_with_spf:
+    description: Wind and sun on the coast dry lips out fast.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
+
+  snacks_for_trail:
+    description: Nuts, energy bars, dried fruit for sections with no food stops. Buy in town.
+    notes: Some stages have 10-17km between food options — see walking stages PDFs.
+    packed:
+      Dan:
+      Matt:
+      Joel:
+      Pat:
+      Jamie:
