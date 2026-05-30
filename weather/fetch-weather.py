@@ -90,13 +90,18 @@ def get_wmo(code):
     c = int(code)
     return WMO_CODES.get(c, (f"Code {c}", "🌡️"))
 
-def fetch_json(url):
-    try:
-        with urlopen(url, timeout=15) as r:
-            return json.loads(r.read())
-    except Exception as e:
-        print(f"  ⚠️  Fetch error: {e}", file=sys.stderr)
-        return None
+def fetch_json(url, retries=3):
+    for attempt in range(retries):
+        try:
+            with urlopen(url, timeout=30) as r:
+                return json.loads(r.read())
+        except Exception as e:
+            if attempt < retries - 1:
+                print(f"  ⚠️  Attempt {attempt+1} failed ({e}), retrying...", file=sys.stderr)
+                time.sleep(2 ** attempt)  # 1s, 2s backoff
+            else:
+                print(f"  ⚠️  All retries failed: {e}", file=sys.stderr)
+                return None
 
 def fetch_historical(lat, lon, month, day):
     """Fetch the same calendar date across CLIMATE_YEARS and return averages."""
