@@ -1,0 +1,27 @@
+name: Tally Accommodation Votes
+
+on:
+  push:
+    paths:
+      - 'sleep/sleep.yaml'
+
+jobs:
+  tally:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run tally script
+        run: python3 sleep/tally-sleep.py sleep/sleep.yaml > sleep/tally-results.md
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sleep/tally-results.md
+          git diff --cached --quiet || git commit -m "tally: update vote results [skip ci]"
+          git push

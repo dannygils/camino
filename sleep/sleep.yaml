@@ -1,0 +1,1762 @@
+# Camino del Norte – Accommodation Voting
+# =========================================
+# HOW TO VOTE:
+#   1. Find your name under each day's `votes` section
+#   2. Enter the name of your preferred accommodation (must match exactly)
+#   3. git add accommodation-votes.yaml
+#   4. git commit -m "votes: [your name] days X-Y"
+#   5. git push
+#
+# PRICE KEY:  $ = budget   $$ = mid-range   $$$ = higher-end   D = donation
+# TYPES:      albergue / hostel / pension / hotel / rural / apartment / camping
+
+# ─────────────────────────────────────────
+# START – IRÚN
+# ─────────────────────────────────────────
+start_irun:
+  location: Irún
+  options:
+    - name: Albergue Jakobi
+      url: https://www.booking.com/hotel/es/albergue-xabarin.en.html
+      type: albergue
+      price: D
+      contact: "+34 640 361 640 | irunsantiago@yahoo.es"
+    - name: Pensión Gema
+      url: https://www.booking.com/hotel/es/pension-gema.en.html
+      type: pension
+      price: $-$$
+      contact: book online
+    - name: Ibis Irun
+      url: https://www.booking.com/hotel/es/ibis-irun.en.html
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Urbanibia Park
+      url: 
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Suites Mendibil
+      url: https://www.booking.com/hotel/es/mendibil.en.html
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 1 – Irún to San Sebastián (26km)
+# ─────────────────────────────────────────
+day_01_irun_to_san_sebastian:
+  distance_km: 26
+  distance_mi: 16.1
+  options:
+    - name: Municipal Albergue Santa Ana
+      url: https://www.witericus.com/
+      location: Pasai Donibane (17km – midpoint option)
+      type: albergue
+      price: D
+      contact: "+34 618 939 666"
+    - name: Balea Hostel
+      url: https://www.booking.com/hotel/es/balea-hostel.en.html
+      location: San Sebastián
+      type: hostel
+      price: $
+      contact: book online
+    - name: Koisi Hostel
+      url: https://www.booking.com/hotel/es/koisi-hostel.en.html
+      location: San Sebastián
+      type: hostel
+      price: $
+      contact: book online
+    - name: Surfing Etxea
+      url: 
+      location: San Sebastián
+      type: hostel
+      price: $
+      contact: book online
+    - name: San Juan Guesthouse
+      url: https://www.booking.com/hotel/es/san-juan-guesthouse.en.html
+      location: San Sebastián
+      type: pension
+      price: $$
+      contact: book online
+    - name: Pension Alameda
+      url: https://www.booking.com/hotel/es/pension-alameda.en.html
+      location: San Sebastián
+      type: pension
+      price: $$-$$$
+      contact: book online
+    - name: Ur-Alde
+      url: 
+      location: San Sebastián
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 2 – San Sebastián to Zarautz (21.5km)
+# ─────────────────────────────────────────
+day_02_san_sebastian_to_zarautz:
+  distance_km: 21.5
+  distance_mi: 13.3
+  options:
+    - name: Albergue San Martín
+      url: https://www.booking.com/hotel/es/albergue-xabarin.en.html
+      location: Orio (15.5km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 617 118 689 | sanmartinaterpea@yahoo.es"
+      note: temporarily closed – verify before booking
+    - name: Gran Camping Zarautz
+      url: 
+      location: Zarautz (19km)
+      type: camping
+      price: $-$$
+      contact: grancampingzarautz.com
+    - name: Zarautz Hostel
+      url: https://www.booking.com/hotel/es/zarautz-hostel-zarautz.en.html
+      location: Zarautz
+      type: hostel
+      price: $
+      contact: book online
+    - name: Zarautz Surf House
+      url: https://www.booking.com/hotel/es/zarautz-surf-house.en.html
+      location: Zarautz
+      type: hostel
+      price: $-$$
+      contact: book online
+    - name: Pension Txiki Polit
+      url: https://www.booking.com/hotel/es/txiki-polit.en.html
+      location: Zarautz
+      type: pension
+      price: $$
+      contact: book online
+    - name: Hotel Alameda
+      url: 
+      location: Zarautz
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Somn Hipsuites Zarautz
+      url: https://www.booking.com/hotel/es/somn-hipsuites-zarautz.en.html
+      location: Zarautz
+      type: hotel
+      price: $$-$$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 3 – Zarautz to Deba (22km)
+# ─────────────────────────────────────────
+day_03_zarautz_to_deba:
+  distance_km: 22
+  distance_mi: 13.6
+  options:
+    - name: Albergue Kanpaia
+      url: 
+      location: Getaria (4km – early stop option)
+      type: albergue
+      price: $
+      contact: "+34 943 010 438 | kanpaiaterpe@gmail.com"
+    - name: Municipal Albergue Geltoki
+      url: 
+      location: Deba
+      type: albergue
+      price: $
+      contact: "+34 943 192 452 | turismo@deba.net"
+    - name: Pensión Zumardi
+      url: https://www.booking.com/hotel/es/pension-zumardi.en.html
+      location: Deba
+      type: pension
+      price: $$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 4 – Deba to Markina-Xemein (25km)
+# ─────────────────────────────────────────
+day_04_deba_to_markina_xemein:
+  distance_km: 25
+  distance_mi: 15.5
+  options:
+    - name: Albergue Izarbide
+      url: https://www.booking.com/hotel/es/albergue-piedad.en.html
+      location: Ibiri Auzoa (5km – early stop option)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Albergue Convento del Carmen
+      url: 
+      location: Markina-Xemein
+      type: albergue
+      price: D
+      contact: "+34 946 166 019 | albergues@hosvobi.org"
+    - name: Albergue-Casa Rural Intxauspe
+      url: 
+      location: Markina-Xemein
+      type: rural
+      price: $$
+      contact: "+34 652 770 889"
+    - name: Pension Txomin Ostatua
+      url: https://www.booking.com/hotel/es/pension-txomin-ostatua.en.html
+      location: Markina-Xemein (2km outside)
+      type: pension
+      price: $$
+      contact: book online
+    - name: Hotel Antsotegi
+      url: https://www.booking.com/hotel/es/ansotegi.en.html
+      location: Markina-Xemein (1km outside)
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 5 – Markina-Xemein to Gernika (25km)
+# ─────────────────────────────────────────
+day_05_markina_to_gernika:
+  distance_km: 25
+  distance_mi: 15.5
+  options:
+    - name: Albergue Usandi
+      url: 
+      location: Bolibar (6km – early stop option)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Monasterio de Zenarruza
+      url: 
+      location: Ziortza (7km – early stop option)
+      type: albergue
+      price: D-$
+      contact: "+34 946 164 179"
+      note: historic monastery stay
+    - name: Albergue Andiketxe
+      url: 
+      location: Olabe (17km – midpoint option)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Albergue Juvenil de Gernika
+      url: https://www.booking.com/hotel/es/albergue-juvenil-ulia.en.html
+      location: Gernika
+      type: albergue
+      price: $
+      contact: "+34 946 126 959"
+      note: temporarily closed – verify before booking
+    - name: Hotel Boliña
+      url: 
+      location: Gernika
+      type: hotel
+      price: $$
+      contact: info online
+    - name: Akelarre Ostatua
+      url: https://www.booking.com/hotel/es/akelarre-ostatua.en.html
+      location: Gernika
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Gernika Adults Only
+      url: 
+      location: Gernika
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 6 – Gernika to Bilbao (32km) ⚠️ Long stage
+# ─────────────────────────────────────────
+day_06_gernika_to_bilbao:
+  distance_km: 32
+  distance_mi: 19.8
+  note: Longest Basque stage
+  options:
+    - name: Albergue Caserío Pozueta
+      url: 
+      location: Pozueta (5.5km – early stop option)
+      type: albergue
+      price: $
+      contact: "+34 696 565 318 | pozueta710@yahoo.com"
+    - name: Albergue Gerekiz
+      url: https://www.booking.com/hotel/es/albergue-ultreia.en.html
+      location: Gerekiz (6.5km – early stop option)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Albergue Eskerika
+      url: 
+      location: Eskerika (8km – early stop option)
+      type: albergue
+      price: $
+      contact: "+34 696 453 582 | albergue.eskerika@gmail.com"
+    - name: Municipal Albergue Larrabetzu
+      url: 
+      location: Larrabetzu (17.5km – midpoint option)
+      type: albergue
+      price: D
+      contact: "+34 609 031 526 | albergues@hosvobi.org"
+    - name: Municipal Albergue Lezama
+      url: 
+      location: Lezama (21km – midpoint option)
+      type: albergue
+      price: D
+      contact: "+34 944 556 007 | albergues@hosvobi.org"
+    - name: Albergue Santa Cruz de Begoña
+      url: 
+      location: Bilbao
+      type: albergue
+      price: D
+      contact: "+34 687 529 627 | info@caminobizkaia.net"
+    - name: Uri Hostel Bilbao
+      url: https://www.booking.com/hotel/es/uri-hostel-bilbao.en.html
+      location: Bilbao
+      type: hostel
+      price: $
+      contact: book online
+    - name: Bilbao Metropolitan Hostel
+      url: https://www.booking.com/hotel/es/bilbao-metropolitan-hostel.en.html
+      location: Bilbao
+      type: hostel
+      price: $
+      contact: book online
+    - name: Hotel Gran Bilbao
+      url: https://www.booking.com/hotel/es/hotel-gran-bilbao.en.html
+      location: Bilbao
+      type: hotel
+      price: $$-$$$
+      contact: book online
+    - name: Radisson Collection Bilbao
+      url: https://www.booking.com/hotel/es/radisson-collection-bilbao.en.html
+      location: Bilbao
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 7 – Bilbao to Pobeña (26km river / 32km mountain)
+# ─────────────────────────────────────────
+day_07_bilbao_to_pobena:
+  distance_km: 26-32
+  distance_mi: 16-20
+  note: "Two route options: river (26km) or mountain (32km)"
+  options:
+    - name: Municipal Albergue Portugalete
+      url: 
+      location: Portugalete (14km – midpoint option)
+      type: albergue
+      price: D
+      contact: "+34 944 729 314 | turismo@portugalete.org"
+    - name: Albergue Bide-Ona
+      url: https://www.booking.com/hotel/es/albergue-piedad.en.html
+      location: Portugalete (14km – midpoint option)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Municipal Albergue Pobeña
+      url: 
+      location: Pobeña
+      type: albergue
+      price: D
+      contact: "+34 609 031 526 | albergues@hosvobi.org"
+    - name: Casa Rural Mugarri
+      url: https://www.booking.com/hotel/es/casa-rural-mugarri.en.html
+      location: Pobeña
+      type: rural
+      price: $$-$$$
+      contact: book online
+    - name: Apartamentos Garazienea
+      url: https://www.booking.com/hotel/es/apartamentos-arco-navia.en.html
+      location: Pobeña
+      type: apartment
+      price: $$-$$$
+      contact: "+34 685 733 762"
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 8 – Pobeña to Castro Urdiales (14–22km)
+# ─────────────────────────────────────────
+day_08_pobena_to_castro_urdiales:
+  distance_km: 14-22
+  distance_mi: 8.6-13.6
+  note: "Two route options: alternative/shorter (14km) or official/longer (22km)"
+  options:
+    - name: Albergue Tu Camino
+      url: https://www.booking.com/hotel/es/albergue-camino-norte.en.html
+      location: Ontón (6km – route split point)
+      type: albergue
+      price: $
+      contact: "+34 942 740 389 | infoalberguetucamino@gmail.com"
+    - name: Municipal Albergue Castro Urdiales
+      url: 
+      location: Castro Urdiales
+      type: albergue
+      price: $
+      contact: "+34 620 608 118"
+    - name: Pension Catamaran
+      url: https://www.booking.com/hotel/es/pension-maruja.en.html
+      location: Castro Urdiales
+      type: pension
+      price: $$
+      contact: book online
+    - name: Pension La Mar
+      url: https://www.booking.com/hotel/es/pensia3n-la-mar.en.html
+      location: Castro Urdiales
+      type: pension
+      price: $$
+      contact: book online
+    - name: Hostal Vista Alegre
+      url: 
+      location: Castro Urdiales
+      type: hostel
+      price: $$-$$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 9 – Castro Urdiales to Laredo (30km)
+# ─────────────────────────────────────────
+day_09_castro_urdiales_to_laredo:
+  distance_km: 30
+  distance_mi: 18.6
+  options:
+    - name: Municipal Albergue Saturnino Candina
+      url: 
+      location: Hazas/Liendo (25km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 682 074 723"
+    - name: Posada Casona de la Ventilla
+      url: https://www.booking.com/hotel/es/casona-de-la-ventilla.en.html
+      location: La Ventilla (27km – late stop option)
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Albergue Casa de la Trinidad
+      url: 
+      location: Laredo
+      type: albergue
+      price: $
+      contact: "+34 942 606 600 | trinicom@telefonica.net"
+    - name: Hostal Rosi
+      url: 
+      location: Laredo
+      type: hostel
+      price: $$
+      contact: hostalrosi.com
+    - name: Hotel Las Ruedas
+      url: https://www.booking.com/hotel/es/las-ruedas.en.html
+      location: Laredo
+      type: hotel
+      price: $$-$$$
+      contact: book online
+    - name: Hotel Cosmopol
+      url: https://www.booking.com/hotel/es/cosmopol.en.html
+      location: Laredo
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 10 – Laredo to Güemes (30km)
+# ─────────────────────────────────────────
+day_10_laredo_to_guemes:
+  distance_km: 30
+  distance_mi: 18.6
+  note: "Two route options: coastal via Santoña (summer only) or inland via Colindres"
+  options:
+    - name: Albergue La Bilbaina
+      url: https://www.booking.com/hotel/es/albergue-xabarin.en.html
+      location: Santoña (5km – coastal route option)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Albergue Playa de Berria
+      url: https://www.booking.com/hotel/es/albergue-turistico-playa-de-berria.en.html
+      location: Berria (8km – coastal route option)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Hotel La Casona
+      url: 
+      location: Noja (14km)
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Albergue La Cabaña del Abuelo Peuto
+      url: 
+      location: Güemes
+      type: albergue
+      price: D
+      contact: info online
+      note: well-known pilgrim albergue
+    - name: Posada El Angel de la Guarda
+      url: https://www.booking.com/hotel/es/posada-el-angel-de-la-guarda.en.html
+      location: Güemes
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Posada Valle de Güemes
+      url: https://www.booking.com/hotel/es/posada-valle-de-guemes.en.html
+      location: Güemes
+      type: hotel
+      price: $$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 11 – Güemes to Santa Cruz de Bezana (25km)
+# ─────────────────────────────────────────
+day_11_guemes_to_santa_cruz_de_bezana:
+  distance_km: 25
+  distance_mi: 15.5
+  note: Passes through Santander – ferry option at Somo (14km)
+  options:
+    - name: Albergue La Cala
+      url: https://www.booking.com/hotel/es/albergue-la-costana.en.html
+      location: Loredo (11.5km – midpoint option)
+      type: albergue
+      price: $-$$
+      contact: info online
+    - name: Albergue Santos Mártires
+      url: 
+      location: Santander (15km)
+      type: albergue
+      price: $
+      contact: "+34 942 219 747"
+    - name: Hostal Vintage Santander
+      url: https://www.booking.com/hotel/es/hostel-santander.en.html
+      location: Santander (15km)
+      type: hostel
+      price: $$
+      contact: book online
+    - name: Silken Coliseum
+      url: 
+      location: Santander (15km)
+      type: hotel
+      price: $$$
+      contact: book online
+    - name: Albergue La Santa Cruz
+      url: https://www.booking.com/hotel/es/albergue-la-costana.en.html
+      location: Santa Cruz de Bezana
+      type: albergue
+      price: D
+      contact: "+34 659 178 806"
+      note: temporarily closed – verify before booking
+    - name: Hotel Camargo
+      url: https://www.booking.com/hotel/es/hostal-el-carro.en.html
+      location: Santa Cruz de Bezana
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Bezana Lago
+      url: 
+      location: Santa Cruz de Bezana
+      type: hotel
+      price: $$
+      contact: nuevohotelbezanalago.com
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 12 – Santa Cruz de Bezana to Santillana del Mar (28km)
+# ─────────────────────────────────────────
+day_12_santa_cruz_to_santillana_del_mar:
+  distance_km: 28
+  distance_mi: 17.3
+  options:
+    - name: Albergue El Convento
+      url: https://www.booking.com/hotel/es/el-albergue-del-montero.en.html
+      location: Santillana del Mar
+      type: albergue
+      price: $
+      contact: "+34 693 816 528 | elconventosantillana@gmail.com"
+    - name: El Pico de Santillana
+      url: https://www.booking.com/hotel/es/el-pico-de-santillana-surfelpico.en.html
+      location: Santillana del Mar
+      type: albergue
+      price: $
+      contact: book online
+    - name: Hotel Colonial de Santillana
+      url: 
+      location: Santillana del Mar
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Los Hidalgos
+      url: https://www.booking.com/hotel/es/los-hidalgos.en.html
+      location: Santillana del Mar
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Spa San Marcos
+      url: 
+      location: Santillana del Mar
+      type: hotel
+      price: $$$
+      contact: book online
+    - name: Hotel Museo Los Infantes
+      url: 
+      location: Santillana del Mar
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 13 – Santillana del Mar to Comillas (22km)
+# ─────────────────────────────────────────
+day_13_santillana_to_comillas:
+  distance_km: 22
+  distance_mi: 13.6
+  options:
+    - name: Albergue Izarra
+      url: https://www.booking.com/hotel/es/albergue-o-xistra.en.html
+      location: Caborredondo (6km – early stop option)
+      type: albergue
+      price: D
+      contact: "+34 628 428 167 | giuliasottanis@gmail.com"
+    - name: Albergue Viejo Lucas
+      url: 
+      location: Cóbreces (12km – midpoint option)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Albergue El Pino
+      url: https://www.booking.com/hotel/es/albergue-el-pino.en.html
+      location: Cóbreces (12km – midpoint option)
+      type: albergue
+      price: $$
+      contact: book online
+    - name: Albergue la Huella del Camino
+      url: https://www.monasterioviaceli.com/
+      location: Comillas
+      type: albergue
+      price: $
+      contact: book online
+    - name: Hotel Comillas
+      url: https://www.booking.com/hotel/es/comillas.en.html
+      location: Comillas
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Solatorre
+      url: https://www.booking.com/hotel/es/solatorre.en.html
+      location: Comillas
+      type: hotel
+      price: $$
+      contact: book online
+    - name: La Solana Montañesa
+      url: https://www.booking.com/hotel/es/posada-rural-la-solana-montanesa.en.html
+      location: Comillas
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 14 – Comillas to Colombres (29km)
+# ─────────────────────────────────────────
+day_14_comillas_to_colombres:
+  distance_km: 29
+  distance_mi: 18
+  options:
+    - name: Municipal Albergue San Vicente de la Barquera
+      url: 
+      location: San Vicente de la Barquera (12km – midpoint option)
+      type: albergue
+      price: D
+      contact: "+34 680 179 113 | info@alberguedesanvicente.com"
+    - name: Pensión Arenal
+      url: https://www.booking.com/hotel/es/pension-arenal.en.html
+      location: San Vicente de la Barquera (12km)
+      type: pension
+      price: $$
+      contact: book online
+    - name: Hotel Faro de San Vicente
+      url: https://www.booking.com/hotel/es/villa-de-san-vicente.en.html
+      location: San Vicente de la Barquera (12km)
+      type: hotel
+      price: $$$
+      contact: book online
+    - name: Albergue El Cantu
+      url: https://www.booking.com/hotel/es/albergue-el-pino.en.html
+      location: Colombres
+      type: albergue
+      price: $
+      contact: "+34 985 412 075"
+    - name: Valbanera
+      url: 
+      location: Colombres
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Quinta de Villanueva
+      url: https://www.booking.com/hotel/es/quinta-de-villanueva.en.html
+      location: Colombres
+      type: rural
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 15 – Colombres to Llanes (23km)
+# ─────────────────────────────────────────
+day_15_colombres_to_llanes:
+  distance_km: 23
+  distance_mi: 14.2
+  options:
+    - name: Albergue Aves de Paso
+      url: https://www.booking.com/hotel/es/albergue-as-pedreiras.en.html
+      location: Pendueles (9km – midpoint option)
+      type: albergue
+      price: D
+      contact: "+34 617 160 810 | cjsaezgomez@gmail.com"
+    - name: Albergue el Caserón de Vidiago
+      url: 
+      location: Vidiago (12km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 600 820 704 | medicruze@gmail.com"
+    - name: Albergue La Estación
+      url: https://www.booking.com/hotel/es/albergue-la-estacia3n.en.html
+      location: Llanes
+      type: albergue
+      price: $
+      contact: book online
+    - name: Albergue Internacional de Llanes
+      url: https://www.booking.com/hotel/es/albergue-internacional-de-llanes.en.html
+      location: Llanes
+      type: albergue
+      price: $
+      contact: book online
+    - name: Hotel Miraolas
+      url: https://www.booking.com/hotel/es/miraolas.en.html
+      location: Llanes
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Sablon
+      url: 
+      location: Llanes
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Gran Hotel Paraiso
+      url: https://www.booking.com/hotel/es/gran-paraiso.en.html
+      location: Llanes
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 16 – Llanes to San Esteban de Leces (34km) ⚠️ Longest stage
+# ─────────────────────────────────────────
+day_16_llanes_to_san_esteban_de_leces:
+  distance_km: 34
+  distance_mi: 21
+  note: Longest stage on the entire route – consider stopping at Ribadesella (30.5km)
+  options:
+    - name: Albergue Casa Rectoral
+      url: 
+      location: Piñeres de Pría (20km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 660 797 733"
+    - name: Albergue Juvenil Roberto Frassinelli
+      url: 
+      location: Ribadesella (30.5km – recommended early stop)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Hotel Brisas del Sella
+      url: https://www.booking.com/hotel/es/brisas-del-sella.en.html
+      location: Ribadesella (30.5km)
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Gran Hotel del Sella
+      url: https://www.booking.com/hotel/es/gran-del-sella.en.html
+      location: Ribadesella (30.5km)
+      type: hotel
+      price: $$-$$$
+      contact: book online
+    - name: Municipal Albergue San Esteban de Leces
+      url: 
+      location: San Esteban de Leces
+      type: albergue
+      price: $
+      contact: "+34 985 857 611"
+      note: only accommodation at stage end
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 17 – San Esteban de Leces to Villaviciosa (33km)
+# ─────────────────────────────────────────
+day_17_san_esteban_to_villaviciosa:
+  distance_km: 33
+  distance_mi: 20
+  options:
+    - name: Albergue Tu Casa
+      url: 
+      location: Vega de Ribadesella (2.5km – very early stop option)
+      type: albergue
+      price: D
+      contact: "+34 984 100 746 | tucasavega@gmail.com"
+    - name: Municipal Albergue La Isla
+      url: 
+      location: La Isla (12km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 684 661 467 | alberguedelaisla@gmail.com"
+    - name: Albergue La Rectoral de Priesca
+      url: 
+      location: Priesca (24km)
+      type: albergue
+      price: $
+      contact: "+34 636 056 520 | larectoraldepriesca@gmail.com"
+      note: closed on Mondays
+    - name: Municipal Albergue Sebrayo
+      url: 
+      location: Sebrayo (27km)
+      type: albergue
+      price: $
+      contact: "+34 699 440 399"
+    - name: Albergue Villaviciosa
+      url: https://www.booking.com/hotel/es/alameda-villaviciosa.en.html
+      location: Villaviciosa
+      type: albergue
+      price: $
+      contact: info online
+    - name: Hotel Arcea Villaviciosa
+      url: https://www.booking.com/hotel/es/alameda-villaviciosa.en.html
+      location: Villaviciosa
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Conventin
+      url: https://www.booking.com/hotel/es/conventin.en.html
+      location: Villaviciosa
+      type: hotel
+      price: $$-$$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 18 – Villaviciosa to Gijón (29km)
+# ─────────────────────────────────────────
+day_18_villaviciosa_to_gijon:
+  distance_km: 29
+  distance_mi: 18
+  note: At Casquita (3.5km) left fork goes to Oviedo/Camino Primitivo
+  options:
+    - name: Albergue La Ferrería
+      url: https://www.booking.com/hotel/es/albergue-as-pedreiras.en.html
+      location: Amandi (2km – very early stop option)
+      type: albergue
+      price: D
+      contact: "+34 646 516 846 | alberguelaferreria@hotmail.com"
+    - name: Albergue Camping Deva
+      url: https://www.booking.com/hotel/es/albergue-camino-norte.en.html
+      location: Deva (22km)
+      type: albergue
+      price: $
+      contact: "+34 985 133 848 | info@campingdeva-gijon.com"
+      note: negative reviews reported
+    - name: Gijon Surf Hostel
+      url: https://www.booking.com/hotel/es/gijon-surf-hostel.en.html
+      location: Gijón
+      type: hostel
+      price: $
+      contact: book online
+    - name: Hotel Bahia
+      url: 
+      location: Gijón
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel Gijon
+      url: 
+      location: Gijón
+      type: hotel
+      price: $$-$$$
+      contact: book online
+    - name: Hotel Ernan Cortes
+      url: https://www.booking.com/hotel/es/hernan-cortes.en.html
+      location: Gijón
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 19 – Gijón to San Martín de Laspra (31km)
+# ─────────────────────────────────────────
+day_19_gijon_to_san_martin_de_laspra:
+  distance_km: 31
+  distance_mi: 19
+  options:
+    - name: Municipal Albergue Avilés
+      url: 
+      location: Avilés (25km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 984 703 117"
+    - name: Hostal La Fruta
+      url: https://www.booking.com/hotel/es/hostal-platas.en.html
+      location: Avilés (25km)
+      type: hostel
+      price: $$
+      contact: book online
+    - name: Hotel Alda Palacio Valdés
+      url: 
+      location: Avilés (25km)
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Palacio de Aviles
+      url: https://www.booking.com/hotel/es/palacio-de-aviles-by-melia.en.html
+      location: Avilés (25km)
+      type: hotel
+      price: $$$
+      contact: book online
+    - name: Las Dunas Hostel
+      url: 
+      location: Salinas (30km)
+      type: hostel
+      price: $-$$
+      contact: escueladesurflasdunas.com
+    - name: El Pez Escorpión Hostel
+      url: 
+      location: Salinas (30km)
+      type: hostel
+      price: $-$$
+      contact: elpezescorpion.com
+    - name: Hotel Castillo de Gauzon
+      url: https://www.booking.com/hotel/es/castillo-de-gauza3n.en.html
+      location: Salinas (30km)
+      type: hotel
+      price: $$-$$$
+      contact: book online
+    - name: Albergue San Martín
+      url: https://www.booking.com/hotel/es/albergue-xabarin.en.html
+      location: San Martín de Laspra
+      type: albergue
+      price: D
+      contact: "+34 659 803 290"
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 20 – San Martín de Laspra to Soto de Luiña (32km)
+# ─────────────────────────────────────────
+day_20_san_martin_to_soto_de_luina:
+  distance_km: 32
+  distance_mi: 20
+  options:
+    - name: Casa Carmina Hostel
+      url: https://www.booking.com/hotel/es/casa-carmina-hostel.en.html
+      location: Muros de Nalón (17km – midpoint option)
+      type: hostel
+      price: $
+      contact: book online
+    - name: Fali's Albergue La Naranja Peregrina
+      url: 
+      location: Muros de Nalón (17km)
+      type: albergue
+      price: $
+      contact: alberguel@tcmevent.at
+    - name: Albergue La Concha
+      url: https://www.booking.com/hotel/es/albergue-la-costana.en.html
+      location: Cudillero (22km – 1km from Camino)
+      type: albergue
+      price: D
+      contact: "+34 666 232 260 | alberguelaconchacudillero@gmail.com"
+    - name: Hotel Casa Prendes
+      url: https://www.booking.com/hotel/es/casa-prendes.en.html
+      location: Cudillero (22km)
+      type: hotel
+      price: $$-$$$
+      contact: book online
+    - name: Albergue de Soto de Luiña
+      url: 
+      location: Soto de Luiña
+      type: albergue
+      price: $
+      contact: "+34 640 692 591 | alberguesotoluina@gmail.com"
+    - name: Albergue La Reguera
+      url: https://www.booking.com/hotel/es/albergue-ultreia.en.html
+      location: Soto de Luiña
+      type: albergue
+      price: $
+      contact: "+34 630 777 409 | elenon70@hotmail.com"
+    - name: Hostal Paulino
+      url: 
+      location: Soto de Luiña
+      type: hostel
+      price: $-$$
+      contact: "+34 985 596 038 | info@hostal-paulino.es"
+    - name: Hotel Valle Las Luiñas
+      url: https://www.booking.com/hotel/es/valle-las-luinas.en.html
+      location: Soto de Luiña
+      type: hotel
+      price: $$-$$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 21 – Soto de Luiña to Cadavedo (20km)
+# ─────────────────────────────────────────
+day_21_soto_de_luina_to_cadavedo:
+  distance_km: 20
+  distance_mi: 12.4
+  options:
+    - name: Albergue Andén de Novellana
+      url: 
+      location: Novellana (5km – early stop option)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Municipal Albergue Cadavedo
+      url: 
+      location: Cadavedo
+      type: albergue
+      price: $
+      contact: "+34 653 128 642"
+    - name: Casa Ina
+      url: 
+      location: Cadavedo
+      type: rural
+      price: $-$$
+      contact: info online
+    - name: Hotel Rural Casa Roja
+      url: https://www.booking.com/hotel/es/rural-casa-roja.en.html
+      location: Cadavedo
+      type: rural
+      price: $$-$$$
+      contact: book online
+    - name: La Reserva de Los Campos
+      url: https://www.booking.com/hotel/es/la-reserva-de-los-campos.en.html
+      location: Cadavedo
+      type: rural
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 22 – Cadavedo to Piñera (31km)
+# ─────────────────────────────────────────
+day_22_cadavedo_to_pinera:
+  distance_km: 31
+  distance_mi: 19.2
+  options:
+    - name: Albergue La Yalga
+      url: https://www.booking.com/hotel/es/albergue-quot-la-yalga-quot.en.html
+      location: Querúas (5km – early stop option)
+      type: albergue
+      price: $-$$
+      contact: book online
+    - name: Albergue Playa de Cueva
+      url: 
+      location: Chano de Canero (6.5km)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Albergue Villa de Luarca
+      url: https://www.booking.com/hotel/es/villa-de-luarca.en.html
+      location: Luarca (16km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 660 819 434 | hotelluarca@yahoo.es"
+    - name: Hotel Rico
+      url: https://www.booking.com/hotel/es/hostelco.en.html
+      location: Luarca (16km)
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Finca Portizuelo
+      url: https://www.booking.com/hotel/es/finca-portizuelo.en.html
+      location: Luarca (16km)
+      type: rural
+      price: $$$
+      contact: book online
+    - name: Albergue La Casa del Peregrino
+      url: https://www.booking.com/hotel/es/albergue-del-peregrino.en.html
+      location: Otur (24km)
+      type: albergue
+      price: D
+      contact: "+34 627 887 507 | jacarandaindalo@hotmail.com"
+    - name: Municipal Albergue Piñera
+      url: 
+      location: Piñera
+      type: albergue
+      price: $
+      contact: "+34 611 040 517 | alberguepineraasturias@gmail.com"
+      note: communal dinner and breakfast at extra cost
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 23 – Piñera to Tapia de Casariego (coastal, 27km)
+#           or Piñera to Tol (inland, 27km)
+# ─────────────────────────────────────────
+day_23_pinera_to_tapia_or_tol:
+  distance_km: 27
+  distance_mi: 16.7
+  note: "Two route options diverge after Porcía. Both routes share stops up to Porcía (21km)"
+  options:
+    - name: Albergue San Roque
+      url: https://www.booking.com/hotel/es/albergue-o-trisquel.en.html
+      location: Navia (5.5km – shared route)
+      type: albergue
+      price: $
+      contact: "+34 691 904 242 | alberguesanroquenavia@gmail.com"
+    - name: Municipal Albergue La Caridad
+      url: 
+      location: La Caridad (16km – shared route)
+      type: albergue
+      price: $
+      contact: "+34 685 154 405 | albergueacarida@hotmail.com"
+    - name: Albergue La Xana
+      url: https://www.booking.com/hotel/es/albergue-la-costana.en.html
+      location: La Caridad (16km – shared route)
+      type: albergue
+      price: $
+      contact: "+34 984 196 830 | alberguelaxana@hotmail.com"
+    - name: Albergue de Tapia de Casariego
+      url: https://www.booking.com/hotel/es/la-ruta-tapia-de-casariego.en.html
+      location: Tapia de Casariego (coastal end)
+      type: albergue
+      price: $
+      contact: "+34 629 664 555"
+    - name: Hotel La Ruta
+      url: 
+      location: Tapia de Casariego (coastal end)
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel La Cuesta
+      url: https://www.booking.com/hotel/es/la-cuesta.en.html
+      location: Tapia de Casariego (coastal end)
+      type: hotel
+      price: $$-$$$
+      contact: book online
+    - name: Municipal Albergue Tol
+      url: 
+      location: Tol (inland end)
+      type: albergue
+      price: $
+      contact: "+34 622 203 897"
+      note: temporarily closed – verify before booking
+    - name: Hotel Casa Cachón
+      url: 
+      location: Tol (inland end)
+      type: hotel
+      price: $$-$$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 24 – Tapia de Casariego to Vilela (coastal, 20km)
+#           or Tol to Trabada (inland, 32km)
+# ─────────────────────────────────────────
+day_24_tapia_to_vilela_or_tol_to_trabada:
+  note: "Coastal and inland routes rejoin at Mondoñedo on Day 25"
+  options:
+    - name: Albergue Camino Norte
+      url: https://www.booking.com/hotel/es/albergue-camino-norte.en.html
+      location: Figueras (10km – coastal route)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Municipal Albergue Ribadeo
+      url: 
+      location: Ribadeo (12km – coastal route)
+      type: albergue
+      price: $
+      contact: "+34 982 128 689"
+    - name: Albergue A Ponte Ribadeo
+      url: 
+      location: Ribadeo (12km – coastal route)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Hotel Bouza
+      url: 
+      location: Ribadeo (12km – coastal route)
+      type: hotel
+      price: $$-$$$
+      contact: book online
+    - name: Parador de Ribadeo
+      url: https://www.booking.com/hotel/es/parador-de-turismo-de-ribadeo.en.html
+      location: Ribadeo (12km – coastal route)
+      type: hotel
+      price: $$$
+      contact: book online
+    - name: Albergue A Pena
+      url: https://www.booking.com/hotel/es/albergue-as-pedreiras.en.html
+      location: Vilela (coastal end)
+      type: albergue
+      price: $
+      contact: "+34 982 137 629 | albergueapena@gmail.com"
+    - name: Albergue Mar y Montaña
+      url: https://www.booking.com/hotel/es/albergue-la-costana.en.html
+      location: Vegadeo (13km – inland route)
+      type: albergue
+      price: $
+      contact: "+34 698 400 416"
+    - name: Municipal Albergue San Xiao
+      url: 
+      location: Dongo (23km – inland route)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Paso de Terrafeita
+      url: http://www.alberguecasteloslourenza.com/en/albergue-lourenza-presentation
+      location: Trabada (inland end)
+      type: rural
+      price: $$-$$$
+      contact: info online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 25 – Vilela to Mondoñedo (coastal, 30km)
+#           or Trabada to Mondoñedo (inland, 19km)
+# ─────────────────────────────────────────
+day_25_to_mondonedo:
+  note: "Both coastal and inland routes end at Mondoñedo"
+  options:
+    - name: Municipal Albergue Lourenzá
+      url: 
+      location: Vilanova de Lourenzá (21km – coastal route)
+      type: albergue
+      price: $
+      contact: "+34 652 186 731"
+    - name: Albergue Triskel
+      url: https://www.booking.com/hotel/es/albergue-o-trisquel.en.html
+      location: Vilanova de Lourenzá (21km – coastal route)
+      type: albergue
+      price: D
+      contact: triskellourenza@gmail.com
+    - name: Municipal Albergue Mondoñedo
+      url: 
+      location: Mondoñedo
+      type: albergue
+      price: $
+      contact: "+34 982 507 040"
+    - name: Lumen Albergue
+      url: https://www.booking.com/hotel/es/lumen-albergue.en.html
+      location: Mondoñedo
+      type: albergue
+      price: $
+      contact: book online
+    - name: El Albergue del Montero
+      url: https://www.booking.com/hotel/es/el-albergue-del-montero.en.html
+      location: Mondoñedo
+      type: albergue
+      price: $
+      contact: book online
+    - name: Hostal Padornelo
+      url: https://www.booking.com/hotel/es/hostal-padornelo.en.html
+      location: Mondoñedo
+      type: hostel
+      price: $-$$
+      contact: book online
+    - name: Hotel Montero
+      url: https://www.booking.com/hotel/es/montero.en.html
+      location: Mondoñedo
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Lumen Place Apartamentos
+      url: 
+      location: Mondoñedo
+      type: apartment
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 26 – Mondoñedo to Castromaior (23km)
+# ─────────────────────────────────────────
+day_26_mondonedo_to_castromaior:
+  distance_km: 23
+  distance_mi: 14
+  options:
+    - name: Albergue O Vilar
+      url: https://www.booking.com/hotel/es/albergue-o-xistra.en.html
+      location: O Vilar (5km – early stop option)
+      type: albergue
+      price: $
+      contact: "+34 982 100 887 | info@alberguedevillalbacastelos.com"
+    - name: Municipal Albergue Gontán
+      url: 
+      location: Gontán (16km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 607 905 146"
+    - name: Albergue Goas
+      url: https://www.booking.com/hotel/es/albergue-o-burgo.en.html
+      location: Abadín (17km)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Albergue Xabarín
+      url: https://www.booking.com/hotel/es/albergue-xabarin.en.html
+      location: Abadín (17km)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Casa Goas
+      url: https://www.booking.com/hotel/es/casa-goas.en.html
+      location: Abadín (17km)
+      type: rural
+      price: $$
+      contact: book online
+    - name: Albergue O Xistral
+      url: https://www.booking.com/hotel/es/albergue-o-xistra.en.html
+      location: Castromaior
+      type: albergue
+      price: $
+      contact: book online
+      note: dinner and breakfast included – a highlight of the route
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 27 – Castromaior to Baamonde (32km)
+# ─────────────────────────────────────────
+day_27_castromaior_to_baamonde:
+  distance_km: 32
+  distance_mi: 20
+  options:
+    - name: Municipal Albergue Vilalba
+      url: 
+      location: Vilalba (16km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 649 900 391"
+    - name: Albergue As Pedreiras
+      url: https://www.booking.com/hotel/es/albergue-as-pedreiras.en.html
+      location: Vilalba (16km)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Albergue A Carballeira
+      url: https://www.booking.com/hotel/es/albergue-a-carballeira.en.html
+      location: Vilalba (16km)
+      type: albergue
+      price: $
+      contact: book online
+    - name: Pensión A Carballeira
+      url: https://www.booking.com/hotel/es/pension-a-carballeira.en.html
+      location: Vilalba (16km)
+      type: pension
+      price: $$
+      contact: book online
+    - name: Municipal Albergue Baamonde
+      url: 
+      location: Baamonde
+      type: albergue
+      price: $
+      contact: "+34 628 250 323"
+    - name: Hostal Ruta Esmeralda
+      url: 
+      location: Baamonde
+      type: hostel
+      price: $$
+      contact: info online
+    - name: Hotel Km101
+      url: 
+      location: Baamonde
+      type: hotel
+      price: $$-$$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 28 – Baamonde to Sobrado dos Monxes
+#           Original route (40km) or New route (32km) ⚠️ Very long stage
+# ─────────────────────────────────────────
+day_28_baamonde_to_sobrado_dos_monxes:
+  note: "⚠️ Original route (40km) is the longest stage on the entire Camino. New route is 32km."
+  options:
+    - name: Albergue San Martin
+      url: https://www.booking.com/hotel/es/albergue-xabarin.en.html
+      location: Miraz (15km – original route)
+      type: albergue
+      price: D
+      contact: "+34 982 830 700"
+    - name: Albergue O Abrigo
+      url: https://www.booking.com/hotel/es/albergue-o-burgo.en.html
+      location: Miraz (15km – original route)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Albergue Casa Roxica
+      url: https://www.booking.com/hotel/es/albergue-xabarin.en.html
+      location: A Roxica (25km – original route)
+      type: albergue
+      price: $
+      contact: info online
+    - name: Municipal Albergue A Cabana
+      url: https://www.witericus.com/
+      location: A Cabana (26km – original route)
+      type: albergue
+      price: $
+      contact: "+34 616 251 462"
+    - name: Albergue del Monasterio de Sobrado
+      url: https://www.booking.com/hotel/es/el-albergue-del-montero.en.html
+      location: Sobrado dos Monxes
+      type: albergue
+      price: $
+      contact: info online
+      note: staying in the famous Cistercian monastery
+    - name: Albergue Lecer
+      url: https://www.booking.com/hotel/es/albergue-lecer-coruna.en.html
+      location: Sobrado dos Monxes
+      type: albergue
+      price: $
+      contact: book online
+    - name: Vía Sacra
+      url: https://www.booking.com/hotel/es/via-sacra.en.html
+      location: Sobrado dos Monxes
+      type: hotel
+      price: $$
+      contact: book online
+    - name: Hotel San Marcus
+      url: 
+      location: Sobrado dos Monxes
+      type: hotel
+      price: $$-$$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 29 – Sobrado dos Monxes to Arzúa (22km)
+# ─────────────────────────────────────────
+day_29_sobrado_to_arzua:
+  distance_km: 22
+  distance_mi: 13.6
+  note: Arzúa is where the Camino del Norte merges with the Camino Francés – expect more pilgrims from here
+  options:
+    - name: Municipal Albergue Boimorto
+      url: 
+      location: A Gándara/Boimorto (12km – midpoint option)
+      type: albergue
+      price: $
+      contact: "+34 638 392 024"
+    - name: Albergue-Hostel Casa da Gandara
+      url: 
+      location: A Gándara/Boimorto (12km)
+      type: albergue
+      price: $-$$
+      contact: book online
+    - name: Albergue Reste y San Roque
+      url: 
+      location: Casaldoeiro (19km)
+      type: albergue
+      price: $
+      contact: "+34 600 313 568"
+    - name: Municipal Albergue Arzúa
+      url: 
+      location: Arzúa
+      type: albergue
+      price: $
+      contact: "+34 660 396 824"
+    - name: Albergue Ultreia
+      url: https://www.booking.com/hotel/es/albergue-ultreia.en.html
+      location: Arzúa
+      type: albergue
+      price: $
+      contact: book online
+    - name: Albergue San Francisco
+      url: https://www.booking.com/hotel/es/albergue-san-francisco.en.html
+      location: Arzúa
+      type: albergue
+      price: $
+      contact: book online
+    - name: A Fonda do Norte
+      url: https://www.booking.com/hotel/es/pousada-do-norte.en.html
+      location: Arzúa
+      type: pension
+      price: $$
+      contact: book online
+    - name: HOTEL ARZÚA
+      url: 
+      location: Arzúa
+      type: hotel
+      price: $$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 30 – Arzúa to O Pedrouzo (20km)
+# ─────────────────────────────────────────
+day_30_arzua_to_o_pedrouzo:
+  distance_km: 20
+  distance_mi: 12.4
+  note: Second to last night before Santiago!
+  options:
+    - name: Municipal Albergue Santa Irene
+      url: 
+      location: Santa Irene (16km – late stop option)
+      type: albergue
+      price: $
+      contact: "+34 660 396 825"
+    - name: Albergue Santa Irene
+      url: 
+      location: Santa Irene (16km)
+      type: albergue
+      price: $
+      contact: "+34 981 511 000"
+    - name: Municipal Albergue O Pedrouzo
+      url: 
+      location: O Pedrouzo
+      type: albergue
+      price: $
+      contact: "+34 660 396 826"
+    - name: Albergue O Trisquel
+      url: https://www.booking.com/hotel/es/albergue-o-trisquel.en.html
+      location: O Pedrouzo
+      type: albergue
+      price: $
+      contact: book online
+    - name: Albergue O Burgo
+      url: https://www.booking.com/hotel/es/albergue-o-burgo.en.html
+      location: O Pedrouzo
+      type: albergue
+      price: $
+      contact: book online
+    - name: Pensión Maruja
+      url: https://www.booking.com/hotel/es/pension-maruja.en.html
+      location: O Pedrouzo
+      type: pension
+      price: $$
+      contact: book online
+    - name: Pensión Residencial Platas
+      url: https://www.booking.com/hotel/es/pension-residencia-f-amp-f.en.html
+      location: O Pedrouzo
+      type: pension
+      price: $$-$$$
+      contact: book online
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
+
+# ─────────────────────────────────────────
+# DAY 31 – O Pedrouzo to Santiago de Compostela (20km) 🎉
+# ─────────────────────────────────────────
+day_31_o_pedrouzo_to_santiago:
+  distance_km: 20
+  distance_mi: 12.4
+  note: Final night – you made it! Monte do Gozo (15km) gives first views of the cathedral spires
+  options:
+    - name: Albergue Lavacolla
+      url: https://www.booking.com/hotel/es/albergue-la-costana.en.html
+      location: Lavacolla (9.5km – en route option)
+      type: albergue
+      price: $
+      contact: "+34 981 897 274 | reservas@alberguelavacolla.com"
+    - name: Municipal Albergue Monte do Gozo
+      url: 
+      location: Monte do Gozo (15km – en route option)
+      type: albergue
+      price: $
+      contact: "+34 981 558 942"
+    - name: Albergue San Lazaro
+      url: 
+      location: Santiago de Compostela
+      type: albergue
+      price: $
+      contact: "+34 981 571 488"
+    - name: Albergue The Last Stamp
+      url: https://www.booking.com/hotel/es/the-last-stamp.en.html
+      location: Santiago de Compostela
+      type: albergue
+      price: $
+      contact: book online
+    - name: Albergue Seminario Menor
+      url: https://www.booking.com/hotel/es/albergue-seminario-menor.en.html
+      location: Santiago de Compostela
+      type: albergue
+      price: $
+      contact: book online
+    - name: Hostal Suso
+      url: https://www.booking.com/hotel/es/hostal-suso.en.html
+      location: Santiago de Compostela
+      type: hostel
+      price: $$-$$$
+      contact: book online
+    - name: Pensión Residencia Fonseca
+      url: https://www.booking.com/hotel/es/pension-residencia-fornos.en.html
+      location: Santiago de Compostela
+      type: pension
+      price: $$
+      contact: book online
+    - name: Parador Hostal Reis Católicos
+      url: https://www.booking.com/hotel/es/hostal-reis-catolicos.en.html
+      location: Santiago de Compostela
+      type: hotel
+      price: $$$
+      contact: book online
+      note: one of the world's oldest hotels, right on the cathedral plaza
+  votes:
+    Dan:
+    Matt:
+    Joel:
+    Pat:
+    Jamie:
