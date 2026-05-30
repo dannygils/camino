@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Camino del Norte – Accommodation Part 2: Gijón to Santiago</name>
+    <description>Places to stay Days 19–31. 🟢 $ budget  🔵 $$ mid-range  🔴 $$$ higher-end. Day info in each pin description.</description>
+    <Style id="budget">
+      <IconStyle><color>ff00cc00</color><scale>0.9</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href></Icon>
+      </IconStyle><LabelStyle><scale>0.8</scale></LabelStyle>
+    </Style>
+    <Style id="mid">
+      <IconStyle><color>ff0088ff</color><scale>0.9</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon>
+      </IconStyle><LabelStyle><scale>0.8</scale></LabelStyle>
+    </Style>
+    <Style id="upper">
+      <IconStyle><color>ff0000ff</color><scale>0.9</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon>
+      </IconStyle><LabelStyle><scale>0.8</scale></LabelStyle>
+    </Style>
+    <Placemark>
+      <name>Municipal Albergue Avilés ($) – Avilés (25km)</name>
+      <description><![CDATA[<b>Day 19 – Gijón to San Martín de Laspra (31km)</b><br/>Municipal albergue de Avilés]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.926,43.556,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Alda Palacio Valdés ($$) – Avilés</name>
+      <description><![CDATA[<b>Day 19 – Gijón to San Martín de Laspra (31km)</b><br/>Hotel Alda Palacio Valdés]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-5.927,43.555,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Palacio de Aviles ($$$) – Avilés</name>
+      <description><![CDATA[<b>Day 19 – Gijón to San Martín de Laspra (31km)</b><br/>Palacio de Aviles]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-5.925,43.557,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Las Dunas Hostel ($-$$) – Salinas (30km)</name>
+      <description><![CDATA[<b>Day 19 – Gijón to San Martín de Laspra (31km)</b><br/>Las Dunas Hostel]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.964,43.573,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue San Martín (donation) – San Martín de Laspra</name>
+      <description><![CDATA[<b>Day 19 – Gijón to San Martín de Laspra (31km)</b><br/>Albergue San Martín]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.9743,43.5672,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Fali's Albergue La Naranja Peregrina ($) – Muros de Nalón (17km)</name>
+      <description><![CDATA[<b>Day 20 – San Martín de Laspra to Soto de Luiña (32km)</b><br/>Fali's Albergue La Naranja Peregrina]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.090,43.557,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue La Concha (donation) – Cudillero (22km)</name>
+      <description><![CDATA[<b>Day 20 – San Martín de Laspra to Soto de Luiña (32km)</b><br/>Albergue La Concha (1 km from the Camino)]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.145,43.562,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Casa Prendes ($$-$$$) – Cudillero</name>
+      <description><![CDATA[<b>Day 20 – San Martín de Laspra to Soto de Luiña (32km)</b><br/>Hotel Casa Prendes]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-6.146,43.561,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue de Soto de Luiña ($) – Soto de Luiña</name>
+      <description><![CDATA[<b>Day 20 – San Martín de Laspra to Soto de Luiña (32km)</b><br/>Albergue de Soto de Luiña]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.2309,43.5619,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Valle Las Luiñas ($$-$$$) – Soto de Luiña</name>
+      <description><![CDATA[<b>Day 20 – San Martín de Laspra to Soto de Luiña (32km)</b><br/>Hotel Valle Las Luiñas]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-6.2313,43.5615,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Andén de Novellana ($) – Novellana (5km)</name>
+      <description><![CDATA[<b>Day 21 – Soto de Luiña to Cadavedo (20km)</b><br/>Albergue Andén de Novellana]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.280,43.556,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Cadavedo ($) – Cadavedo</name>
+      <description><![CDATA[<b>Day 21 – Soto de Luiña to Cadavedo (20km)</b><br/>Municipal albergue de Cadavedo]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.3882,43.5447,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Rural Casa Roja ($$-$$$) – Cadavedo</name>
+      <description><![CDATA[<b>Day 21 – Soto de Luiña to Cadavedo (20km)</b><br/>Hotel Rural Casa Roja]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-6.3886,43.5443,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Villa de Luarca ($) – Luarca (16km)</name>
+      <description><![CDATA[<b>Day 22 – Cadavedo to Piñera (31km)</b><br/>Albergue Villa de Luarca]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.534,43.547,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Rico ($$) – Luarca</name>
+      <description><![CDATA[<b>Day 22 – Cadavedo to Piñera (31km)</b><br/>Hotel Rico]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-6.535,43.546,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Casa del Peregrino (donation) – Otur (24km)</name>
+      <description><![CDATA[<b>Day 22 – Cadavedo to Piñera (31km)</b><br/>Albergue La Casa del Peregrino]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.615,43.546,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Piñera ($) – Piñera</name>
+      <description><![CDATA[<b>Day 22 – Cadavedo to Piñera (31km)</b><br/>Municipal albergue de Piñera]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.6683,43.5451,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue San Roque ($) – Navia (5.5km)</name>
+      <description><![CDATA[<b>Day 23 – Piñera to Tapia de Casariego/Tol (27km)</b><br/>Albergue San Roque]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.726,43.560,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue La Caridad ($) – La Caridad (16km)</name>
+      <description><![CDATA[<b>Day 23 – Piñera to Tapia de Casariego/Tol (27km)</b><br/>Municipal albergue de la Caridad]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.848,43.561,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue de Tapia de Casariego ($) – Tapia de Casariego</name>
+      <description><![CDATA[<b>Day 23 – Piñera to Tapia de Casariego/Tol (27km)</b><br/>Albergue de Tapia de Casariego]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-6.9439,43.5702,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel La Ruta ($$) – Tapia de Casariego</name>
+      <description><![CDATA[<b>Day 23 – Piñera to Tapia de Casariego/Tol (27km)</b><br/>Hotel La Ruta]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-6.9443,43.5699,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Casa Cachón ($$-$$$) – Tol (inland route)</name>
+      <description><![CDATA[<b>Day 23 – Piñera to Tapia de Casariego/Tol (27km)</b><br/>Hotel Casa Cachón (inland route end)]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-6.955,43.555,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Camino Norte ($) – Figueras (10km, coastal)</name>
+      <description><![CDATA[<b>Day 24 – Tapia de Casariego to Vilela / Tol to Trabada</b><br/>Albergue Camino Norte]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.058,43.527,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Ribadeo ($) – Ribadeo (12km, coastal)</name>
+      <description><![CDATA[<b>Day 24 – Tapia de Casariego to Vilela / Tol to Trabada</b><br/>Municipal albergue de Ribadeo]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.040,43.537,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Parador de Ribadeo ($$$) – Ribadeo</name>
+      <description><![CDATA[<b>Day 24 – Tapia de Casariego to Vilela / Tol to Trabada</b><br/>Parador de Ribadeo]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-7.038,43.539,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue A Pena ($) – Vilela (coastal end)</name>
+      <description><![CDATA[<b>Day 24 – Tapia de Casariego to Vilela / Tol to Trabada</b><br/>Albergue A Pena]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.1026,43.5115,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Mar y Montaña ($) – Vegadeo (13km, inland)</name>
+      <description><![CDATA[<b>Day 24 – Tapia de Casariego to Vilela / Tol to Trabada</b><br/>Albergue Mar y Montaña]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.051,43.487,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Paso de Terrafeita ($$-$$$) – Trabada (inland end)</name>
+      <description><![CDATA[<b>Day 24 – Tapia de Casariego to Vilela / Tol to Trabada</b><br/>Paso de Terrafeita]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-7.214,43.400,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Lourenzá ($) – Vilanova de Lourenzá (21km, coastal)</name>
+      <description><![CDATA[<b>Day 25 – Vilela/Trabada to Mondoñedo</b><br/>Municipal albergue de Lourenzá]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.288,43.472,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Mondoñedo ($) – Mondoñedo</name>
+      <description><![CDATA[<b>Day 25 – Vilela/Trabada to Mondoñedo</b><br/>Municipal albergue de Mondoñedo]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.3638,43.4286,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Lumen Albergue ($) – Mondoñedo</name>
+      <description><![CDATA[<b>Day 25 – Vilela/Trabada to Mondoñedo</b><br/>Lumen Albergue]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.3642,43.4282,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Montero ($$) – Mondoñedo</name>
+      <description><![CDATA[<b>Day 25 – Vilela/Trabada to Mondoñedo</b><br/>Hotel Montero]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-7.3634,43.4290,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue O Vilar ($) – O Vilar (5km)</name>
+      <description><![CDATA[<b>Day 26 – Mondoñedo to Castromaior (23km)</b><br/>Albergue O Vilar]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.410,43.408,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Gontán ($) – Gontán (16km)</name>
+      <description><![CDATA[<b>Day 26 – Mondoñedo to Castromaior (23km)</b><br/>Municipal albergue de Gontán]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.494,43.372,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Goas ($) – Abadín (17km)</name>
+      <description><![CDATA[<b>Day 26 – Mondoñedo to Castromaior (23km)</b><br/>Albergue Goas]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.503,43.366,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue O Xistral ($) – Castromaior</name>
+      <description><![CDATA[<b>Day 26 – Mondoñedo to Castromaior (23km)</b><br/>Albergue O Xistral]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.5431,43.3448,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Vilalba ($) – Vilalba (16km)</name>
+      <description><![CDATA[<b>Day 27 – Castromaior to Baamonde (32km)</b><br/>Municipal albergue de Vilalba]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.680,43.296,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue A Carballeira ($) – Vilalba</name>
+      <description><![CDATA[<b>Day 27 – Castromaior to Baamonde (32km)</b><br/>Albergue A Carballeira]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.681,43.295,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Baamonde ($) – Baamonde</name>
+      <description><![CDATA[<b>Day 27 – Castromaior to Baamonde (32km)</b><br/>Municipal albergue de Baamonde]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.7566,43.1763,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Km101 ($$-$$$) – Baamonde</name>
+      <description><![CDATA[<b>Day 27 – Castromaior to Baamonde (32km)</b><br/>Hotel Km101]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-7.7570,43.1759,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue San Martin (donation) – Miraz (15km)</name>
+      <description><![CDATA[<b>Day 28 – Baamonde to Sobrado dos Monxes (32–40km)</b><br/>Albergue San Martin]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.882,43.110,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Casa Roxica ($) – A Roxica (25km)</name>
+      <description><![CDATA[<b>Day 28 – Baamonde to Sobrado dos Monxes (32–40km)</b><br/>Albergue Casa Roxica]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.940,43.090,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue A Cabana ($) – A Cabana (26km)</name>
+      <description><![CDATA[<b>Day 28 – Baamonde to Sobrado dos Monxes (32–40km)</b><br/>Municipal albergue de A Cabana]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.950,43.082,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue del Monasterio de Sobrado ($) – Sobrado dos Monxes</name>
+      <description><![CDATA[<b>Day 28 – Baamonde to Sobrado dos Monxes (32–40km)</b><br/>Albergue del Monasterio de Sobrado dos Monxes]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-7.9811,43.0705,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel San Marcus ($$-$$$) – Sobrado dos Monxes</name>
+      <description><![CDATA[<b>Day 28 – Baamonde to Sobrado dos Monxes (32–40km)</b><br/>Hotel San Marcus]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-7.9815,43.0701,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Boimorto ($) – A Gándara/Boimorto (12km)</name>
+      <description><![CDATA[<b>Day 29 – Sobrado dos Monxes to Arzúa (22km)</b><br/>Municipal albergue de Boimorto]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.097,43.006,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Reste y San Roque ($) – Casaldoeiro (19km)</name>
+      <description><![CDATA[<b>Day 29 – Sobrado dos Monxes to Arzúa (22km)</b><br/>Albergue Restaurante Reste y San Roque]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.143,42.940,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Arzúa ($) – Arzúa</name>
+      <description><![CDATA[<b>Day 29 – Sobrado dos Monxes to Arzúa (22km)</b><br/>Municipal albergue de Arzua]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.1608,42.9297,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Ultreia ($) – Arzúa</name>
+      <description><![CDATA[<b>Day 29 – Sobrado dos Monxes to Arzúa (22km)</b><br/>Albergue Ultreia]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.1612,42.9293,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>A Fonda do Norte ($$) – Arzúa</name>
+      <description><![CDATA[<b>Day 29 – Sobrado dos Monxes to Arzúa (22km)</b><br/>A Fonda do Norte]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-8.1604,42.9300,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>HOTEL ARZÚA ($$$) – Arzúa</name>
+      <description><![CDATA[<b>Day 29 – Sobrado dos Monxes to Arzúa (22km)</b><br/>HOTEL ARZÚA]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-8.1600,42.9303,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Santa Irene ($) – Santa Irene (16km)</name>
+      <description><![CDATA[<b>Day 30 – Arzúa to O Pedrouzo (20km)</b><br/>Municipal albergue Santa Irene]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.300,42.905,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue O Pedrouzo ($) – O Pedrouzo</name>
+      <description><![CDATA[<b>Day 30 – Arzúa to O Pedrouzo (20km)</b><br/>Municipal albergue de O Pedrouzo]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.3625,42.9046,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue O Trisquel ($) – O Pedrouzo</name>
+      <description><![CDATA[<b>Day 30 – Arzúa to O Pedrouzo (20km)</b><br/>Albergue O Trisquel]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.3628,42.9043,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Pensión Residencial Platas ($$-$$$) – O Pedrouzo</name>
+      <description><![CDATA[<b>Day 30 – Arzúa to O Pedrouzo (20km)</b><br/>Pensión Residencial Platas]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-8.3621,42.9049,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Lavacolla ($) – Lavacolla (9.5km)</name>
+      <description><![CDATA[<b>Day 31 – O Pedrouzo to Santiago de Compostela (20km)</b><br/>Albergue Lavacolla]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.445,42.887,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Monte do Gozo ($) – Monte do Gozo (15km)</name>
+      <description><![CDATA[<b>Day 31 – O Pedrouzo to Santiago de Compostela (20km)</b><br/>Municipal albergue de Monte do Gozo]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.516,42.882,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue San Lazaro ($) – Santiago de Compostela</name>
+      <description><![CDATA[<b>Day 31 – O Pedrouzo to Santiago de Compostela (20km)</b><br/>Albergue San Lazaro]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.5442,42.8769,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue The Last Stamp ($) – Santiago de Compostela</name>
+      <description><![CDATA[<b>Day 31 – O Pedrouzo to Santiago de Compostela (20km)</b><br/>Albergue The Last Stamp]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-8.5445,42.8765,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hostal Suso ($$-$$$) – Santiago de Compostela</name>
+      <description><![CDATA[<b>Day 31 – O Pedrouzo to Santiago de Compostela (20km)</b><br/>Hostal Suso]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-8.5438,42.8772,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Parador Hostal Reis Católicos ($$$) – Santiago de Compostela</name>
+      <description><![CDATA[<b>Day 31 – O Pedrouzo to Santiago de Compostela (20km)</b><br/>Parador Hostal Reis Católicos]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-8.5448,42.8776,0</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

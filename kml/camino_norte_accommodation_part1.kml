@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Camino del Norte – Accommodation Part 1: Irún to Gijón</name>
+    <description>Places to stay Days 1–18. 🟢 $ budget  🔵 $$ mid-range  🔴 $$$ higher-end. Day info in each pin description.</description>
+    <Style id="budget">
+      <IconStyle><color>ff00cc00</color><scale>0.9</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href></Icon>
+      </IconStyle><LabelStyle><scale>0.8</scale></LabelStyle>
+    </Style>
+    <Style id="mid">
+      <IconStyle><color>ff0088ff</color><scale>0.9</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon>
+      </IconStyle><LabelStyle><scale>0.8</scale></LabelStyle>
+    </Style>
+    <Style id="upper">
+      <IconStyle><color>ff0000ff</color><scale>0.9</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon>
+      </IconStyle><LabelStyle><scale>0.8</scale></LabelStyle>
+    </Style>
+    <Placemark>
+      <name>Albergue Jakobi (donation) – Irún</name>
+      <description><![CDATA[<b>Start – Irún</b><br/>Municipal albergue Jakobi]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-1.7888495,43.3381465,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Pensión Gema ($-$$) – Irún</name>
+      <description><![CDATA[<b>Start – Irún</b><br/>Pensión Gema]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-1.789,43.338,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibis Irun ($$) – Irún</name>
+      <description><![CDATA[<b>Start – Irún</b><br/>Ibis Irun]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-1.7895,43.3375,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Urbanibia Park ($$) – Irún</name>
+      <description><![CDATA[<b>Start – Irún</b><br/>Hotel Urbanibia Park]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-1.7885,43.3385,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Suites Mendibil ($$$) – Irún</name>
+      <description><![CDATA[<b>Start – Irún</b><br/>Suites Mendibil]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-1.7882,43.3388,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Padres Capuchinos ($) – Amute-Kosta (2.5km)</name>
+      <description><![CDATA[<b>Day 1 – Irún to San Sebastián (26km)</b><br/>Albergue de Padres Capuchinos]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-1.810,43.326,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Santa Ana (donation) – Pasai Donibane (17km)</name>
+      <description><![CDATA[<b>Day 1 – Irún to San Sebastián (26km)</b><br/>Municipal albergue Santa Ana]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-1.927,43.323,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Balea Hostel ($) – San Sebastián</name>
+      <description><![CDATA[<b>Day 1 – Irún to San Sebastián (26km)</b><br/>Balea Hostel]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-1.9817,43.3182,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Koisi Hostel ($) – San Sebastián</name>
+      <description><![CDATA[<b>Day 1 – Irún to San Sebastián (26km)</b><br/>Koisi Hostel]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-1.9820,43.3185,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>San Juan Guesthouse ($$) – San Sebastián</name>
+      <description><![CDATA[<b>Day 1 – Irún to San Sebastián (26km)</b><br/>San Juan Guesthouse]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-1.9822,43.3179,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Pension Alameda ($$-$$$) – San Sebastián</name>
+      <description><![CDATA[<b>Day 1 – Irún to San Sebastián (26km)</b><br/>Pension Alameda]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-1.9815,43.3176,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Ur-Alde ($$$) – San Sebastián</name>
+      <description><![CDATA[<b>Day 1 – Irún to San Sebastián (26km)</b><br/>Ur-Alde]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-1.9810,43.3172,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue San Martín (temporarily closed, $) – Orio (15.5km)</name>
+      <description><![CDATA[<b>Day 2 – San Sebastián to Zarautz (21.5km)</b><br/>Albergue San Martín]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.117,43.284,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Gran Camping Zarautz ($-$$) – 19km</name>
+      <description><![CDATA[<b>Day 2 – San Sebastián to Zarautz (21.5km)</b><br/>Gran Camping Zarautz]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.166,43.286,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Zarautz Hostel ($) – Zarautz</name>
+      <description><![CDATA[<b>Day 2 – San Sebastián to Zarautz (21.5km)</b><br/>Zarautz Hostel]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.1711,43.2848,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Pension Txiki Polit ($$) – Zarautz</name>
+      <description><![CDATA[<b>Day 2 – San Sebastián to Zarautz (21.5km)</b><br/>Pension Txiki Polit]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-2.1715,43.2845,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Alameda ($$) – Zarautz</name>
+      <description><![CDATA[<b>Day 2 – San Sebastián to Zarautz (21.5km)</b><br/>Hotel Alameda]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-2.1708,43.2852,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Kanpaia ($) – Getaria (4km)</name>
+      <description><![CDATA[<b>Day 3 – Zarautz to Deba (22km)</b><br/>Albergue Kanpaia]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.204,43.299,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Geltoki ($) – Deba</name>
+      <description><![CDATA[<b>Day 3 – Zarautz to Deba (22km)</b><br/>Municipal albergue Geltoki]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.3524,43.2963,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Pensión Zumardi ($$) – Deba</name>
+      <description><![CDATA[<b>Day 3 – Zarautz to Deba (22km)</b><br/>Pensión Zumardi]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-2.3520,43.2960,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Izarbide ($) – Ibiri Auzoa (5km)</name>
+      <description><![CDATA[<b>Day 4 – Deba to Markina-Xemein (25km)</b><br/>Albergue Izarbide aterpetxea]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.398,43.285,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Convento del Carmen (donation) – Markina-Xemein</name>
+      <description><![CDATA[<b>Day 4 – Deba to Markina-Xemein (25km)</b><br/>Albergue Convento del Carmen]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.4963,43.2673,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue-Casa Rural Intxauspe ($$) – Markina-Xemein</name>
+      <description><![CDATA[<b>Day 4 – Deba to Markina-Xemein (25km)</b><br/>Albergue-Casa Rural Intxauspe]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-2.4958,43.2670,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Usandi ($) – Bolibar (6km)</name>
+      <description><![CDATA[<b>Day 5 – Markina-Xemein to Gernika (25km)</b><br/>Albergue Usandi]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.561,43.299,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Monasterio de Zenarruza (donation) – Ziortza (7km)</name>
+      <description><![CDATA[<b>Day 5 – Markina-Xemein to Gernika (25km)</b><br/>Albergue/Hospedaria del Monasterio de Zenarruza]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.574,43.302,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Andiketxe ($) – Olabe (17km)</name>
+      <description><![CDATA[<b>Day 5 – Markina-Xemein to Gernika (25km)</b><br/>Albergue Andiketxe]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.641,43.310,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Juvenil de Gernika (temp. closed, $) – Gernika</name>
+      <description><![CDATA[<b>Day 5 – Markina-Xemein to Gernika (25km)</b><br/>Albergue Juvenil de Gernika]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.6808,43.3114,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Boliña ($$) – Gernika</name>
+      <description><![CDATA[<b>Day 5 – Markina-Xemein to Gernika (25km)</b><br/>Hotel Boliña]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-2.6812,43.3110,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Gernika Adults Only ($$$) – Gernika</name>
+      <description><![CDATA[<b>Day 5 – Markina-Xemein to Gernika (25km)</b><br/>Hotel Gernika - Adults Only]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-2.6805,43.3118,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Caserío Pozueta ($) – Pozueta (5.5km)</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Albergue Caserío Pozueta]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.737,43.315,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Gerekiz ($) – Gerekiz (6.5km)</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Albergue de Peregrinos Gerekiz]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.748,43.314,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Eskerika ($) – Eskerika (8km)</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Albergue Eskerika]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.762,43.310,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Larrabetzu (donation) – Larrabetzu (17.5km)</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Municipal albergue de Larrabetzu]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.842,43.282,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Lezama (donation) – Lezama (21km)</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Municipal albergue de Lezama]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.878,43.272,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Santa Cruz de Begoña (donation) – Bilbao</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Albergue Santa Cruz de Begoña]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.9348,43.2634,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Uri Hostel ($) – Bilbao</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Uri Hostel Bilbao]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-2.9352,43.2630,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Gran Bilbao ($$-$$$) – Bilbao</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Hotel Gran Bilbao]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-2.9344,43.2638,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Radisson Collection Bilbao ($$$) – Bilbao</name>
+      <description><![CDATA[<b>Day 6 – Gernika to Bilbao (32km)</b><br/>Radisson Collection Bilbao]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-2.9340,43.2642,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Portugalete (donation) – Portugalete (14km)</name>
+      <description><![CDATA[<b>Day 7 – Bilbao to Pobeña (26km)</b><br/>Municipal albergue de Portugalete]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.019,43.322,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Bide-Ona ($) – Portugalete</name>
+      <description><![CDATA[<b>Day 7 – Bilbao to Pobeña (26km)</b><br/>Albergue Bide-Ona]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.020,43.321,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Pobeña (donation) – Pobeña</name>
+      <description><![CDATA[<b>Day 7 – Bilbao to Pobeña (26km)</b><br/>Municipal albergue de Pobeña]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.1250,43.3445,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Casa Rural Mugarri ($$-$$$) – Pobeña</name>
+      <description><![CDATA[<b>Day 7 – Bilbao to Pobeña (26km)</b><br/>Casa Rural Mugarri]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.1245,43.3448,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Tu Camino ($) – Ontón (6km, route split)</name>
+      <description><![CDATA[<b>Day 8 – Pobeña to Castro Urdiales (14–22km)</b><br/>Albergue Tu Camino]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.173,43.358,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue Castro Urdiales ($) – Castro Urdiales</name>
+      <description><![CDATA[<b>Day 8 – Pobeña to Castro Urdiales (14–22km)</b><br/>Municipal albergue de Castro Urdiales]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.2156,43.3688,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Pension Catamaran ($$) – Castro Urdiales</name>
+      <description><![CDATA[<b>Day 8 – Pobeña to Castro Urdiales (14–22km)</b><br/>Pension Catamaran]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.2160,43.3685,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hostal Vista Alegre ($$-$$$) – Castro Urdiales</name>
+      <description><![CDATA[<b>Day 8 – Pobeña to Castro Urdiales (14–22km)</b><br/>Hostal Vista Alegre]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.2152,43.3692,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Saturnino Candina ($) – Hazas/Liendo (25km)</name>
+      <description><![CDATA[<b>Day 9 – Castro Urdiales to Laredo (30km)</b><br/>Municipal albergue Saturnino Candina]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.398,43.403,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Posada Casona de la Ventilla ($$) – La Ventilla (27km)</name>
+      <description><![CDATA[<b>Day 9 – Castro Urdiales to Laredo (30km)</b><br/>Posada Casona de la Ventilla]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.415,43.406,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Casa de la Trinidad ($) – Laredo</name>
+      <description><![CDATA[<b>Day 9 – Castro Urdiales to Laredo (30km)</b><br/>Albergue-residencia Casa de la Trinidad]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.4316,43.4089,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hostal Rosi ($$) – Laredo</name>
+      <description><![CDATA[<b>Day 9 – Castro Urdiales to Laredo (30km)</b><br/>Hostal Rosi]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.4320,43.4086,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Cosmopol ($$$) – Laredo</name>
+      <description><![CDATA[<b>Day 9 – Castro Urdiales to Laredo (30km)</b><br/>Hotel Cosmopol]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-3.4312,43.4092,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue La Bilbaina ($) – Santoña (5km)</name>
+      <description><![CDATA[<b>Day 10 – Laredo to Güemes (30km)</b><br/>Albergue De Peregrinos La Bilbaina]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.487,43.428,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Playa de Berria ($) – Berria (8km)</name>
+      <description><![CDATA[<b>Day 10 – Laredo to Güemes (30km)</b><br/>Albergue Playa de Berria]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.512,43.441,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel La Casona ($$) – Noja (14km)</name>
+      <description><![CDATA[<b>Day 10 – Laredo to Güemes (30km)</b><br/>Hotel La Casona]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.536,43.476,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue La Cabaña del Abuelo Peuto (donation) – Güemes</name>
+      <description><![CDATA[<b>Day 10 – Laredo to Güemes (30km)</b><br/>Albergue La Cabaña del Abuelo Peuto]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.6349,43.4560,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Posada Valle de Güemes ($$) – Güemes</name>
+      <description><![CDATA[<b>Day 10 – Laredo to Güemes (30km)</b><br/>Posada Valle de Güemes]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.6352,43.4557,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue La Cala ($-$$) – Loredo (11.5km)</name>
+      <description><![CDATA[<b>Day 11 – Güemes to Santa Cruz de Bezana (25km)</b><br/>Albergue La Cala]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.771,43.460,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Santos Mártires ($) – Santander (15km)</name>
+      <description><![CDATA[<b>Day 11 – Güemes to Santa Cruz de Bezana (25km)</b><br/>Albergue Santos Mártires]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.804,43.462,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hostal Vintage Santander ($$) – Santander</name>
+      <description><![CDATA[<b>Day 11 – Güemes to Santa Cruz de Bezana (25km)</b><br/>Hostal Vintage Santander]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.806,43.461,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue La Santa Cruz (temp. closed, donation) – Santa Cruz de Bezana</name>
+      <description><![CDATA[<b>Day 11 – Güemes to Santa Cruz de Bezana (25km)</b><br/>Albergue La Santa Cruz]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-3.9024,43.4426,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Bezana Lago ($$) – Santa Cruz de Bezana</name>
+      <description><![CDATA[<b>Day 11 – Güemes to Santa Cruz de Bezana (25km)</b><br/>Hotel Bezana Lago]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-3.9028,43.4422,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue El Convento ($) – Santillana del Mar</name>
+      <description><![CDATA[<b>Day 12 – Santa Cruz de Bezana to Santillana del Mar (28km)</b><br/>Albergue El Convento]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-4.1066,43.3873,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Colonial de Santillana ($$) – Santillana del Mar</name>
+      <description><![CDATA[<b>Day 12 – Santa Cruz de Bezana to Santillana del Mar (28km)</b><br/>Hotel Colonial de Santillana]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-4.1070,43.3870,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Spa San Marcos ($$$) – Santillana del Mar</name>
+      <description><![CDATA[<b>Day 12 – Santa Cruz de Bezana to Santillana del Mar (28km)</b><br/>Hotel Spa San Marcos]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-4.1062,43.3876,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Museo Los Infantes ($$$) – Santillana del Mar</name>
+      <description><![CDATA[<b>Day 12 – Santa Cruz de Bezana to Santillana del Mar (28km)</b><br/>Hotel Museo Los Infantes]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-4.1058,43.3879,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Izarra (donation) – Caborredondo (6km)</name>
+      <description><![CDATA[<b>Day 13 – Santillana del Mar to Comillas (22km)</b><br/>Albergue Izarra]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-4.157,43.389,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Viejo Lucas ($) – Cóbreces (12km)</name>
+      <description><![CDATA[<b>Day 13 – Santillana del Mar to Comillas (22km)</b><br/>Albergue Viejo Lucas]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-4.222,43.386,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue la Huella del Camino ($) – Comillas</name>
+      <description><![CDATA[<b>Day 13 – Santillana del Mar to Comillas (22km)</b><br/>Albergue la Huella del Camino]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-4.2923,43.3856,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Comillas ($$) – Comillas</name>
+      <description><![CDATA[<b>Day 13 – Santillana del Mar to Comillas (22km)</b><br/>Hotel Comillas]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-4.2927,43.3852,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>La Solana Montañesa ($$$) – Comillas</name>
+      <description><![CDATA[<b>Day 13 – Santillana del Mar to Comillas (22km)</b><br/>La Solana Montañesa]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-4.2919,43.3860,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue San Vicente (donation) – San Vicente de la Barquera (12km)</name>
+      <description><![CDATA[<b>Day 14 – Comillas to Colombres (29km)</b><br/>Municipal albergue de San Vicente]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-4.392,43.389,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue El Cantu ($) – Colombres</name>
+      <description><![CDATA[<b>Day 14 – Comillas to Colombres (29km)</b><br/>Albergue El Cantu]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-4.5402,43.3748,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Quinta de Villanueva ($$$) – Colombres</name>
+      <description><![CDATA[<b>Day 14 – Comillas to Colombres (29km)</b><br/>Quinta de Villanueva]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-4.5398,43.3752,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Aves de Paso (donation) – Pendueles (9km)</name>
+      <description><![CDATA[<b>Day 15 – Colombres to Llanes (23km)</b><br/>Albergue Aves de Paso]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-4.671,43.413,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue La Estación ($) – Llanes</name>
+      <description><![CDATA[<b>Day 15 – Colombres to Llanes (23km)</b><br/>Albergue La Estación]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-4.7562,43.4211,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Miraolas ($$) – Llanes</name>
+      <description><![CDATA[<b>Day 15 – Colombres to Llanes (23km)</b><br/>Hotel Miraolas]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-4.7566,43.4208,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Gran Hotel Paraiso ($$$) – Llanes</name>
+      <description><![CDATA[<b>Day 15 – Colombres to Llanes (23km)</b><br/>Gran Hotel Paraiso]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-4.7558,43.4215,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Piñeres de Pría ($) – Piñeres de Pría (20km)</name>
+      <description><![CDATA[<b>Day 16 – Llanes to San Esteban de Leces (34km)</b><br/>Albergue Casa Rectoral]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.018,43.452,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Juvenil Ribadesella ($) – Ribadesella (30.5km)</name>
+      <description><![CDATA[<b>Day 16 – Llanes to San Esteban de Leces (34km)</b><br/>Albergue Juvenil Roberto Frassinelli]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.062,43.462,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Gran del Sella ($$-$$$) – Ribadesella</name>
+      <description><![CDATA[<b>Day 16 – Llanes to San Esteban de Leces (34km)</b><br/>Gran Hotel del Sella]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-5.063,43.461,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue San Esteban de Leces ($) – San Esteban de Leces</name>
+      <description><![CDATA[<b>Day 16 – Llanes to San Esteban de Leces (34km)</b><br/>Municipal albergue de San Esteban de Leces]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.1103,43.4645,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Tu Casa (donation) – Vega de Ribadesella (2.5km)</name>
+      <description><![CDATA[<b>Day 17 – San Esteban de Leces to Villaviciosa (33km)</b><br/>Albergue Tu Casa]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.130,43.464,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Municipal Albergue La Isla ($) – La Isla (12km)</name>
+      <description><![CDATA[<b>Day 17 – San Esteban de Leces to Villaviciosa (33km)</b><br/>Municipal albergue de La Isla]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.252,43.465,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue La Rectoral de Priesca (closed Mon, $) – Priesca (24km)</name>
+      <description><![CDATA[<b>Day 17 – San Esteban de Leces to Villaviciosa (33km)</b><br/>Albergue La Rectoral de Priesca]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.381,43.475,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Villaviciosa ($) – Villaviciosa</name>
+      <description><![CDATA[<b>Day 17 – San Esteban de Leces to Villaviciosa (33km)</b><br/>Albergue Villaviciosa]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.4356,43.4817,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Arcea Villaviciosa ($$) – Villaviciosa</name>
+      <description><![CDATA[<b>Day 17 – San Esteban de Leces to Villaviciosa (33km)</b><br/>Hotel Arcea Villaviciosa]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-5.4360,43.4813,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue La Ferrería (donation) – Amandi (2km)</name>
+      <description><![CDATA[<b>Day 18 – Villaviciosa to Gijón (29km)</b><br/>Albergue La Ferrería]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.453,43.481,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Albergue Camping Deva ($) – Deva (22km)</name>
+      <description><![CDATA[<b>Day 18 – Villaviciosa to Gijón (29km)</b><br/>Albergue de peregrinos camping Deva Gijón]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.575,43.525,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Gijon Surf Hostel ($) – Gijón</name>
+      <description><![CDATA[<b>Day 18 – Villaviciosa to Gijón (29km)</b><br/>Gijon Surf Hostel]]></description>
+      <styleUrl>#budget</styleUrl>
+      <Point><coordinates>-5.6610,43.5322,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Bahia ($$) – Gijón</name>
+      <description><![CDATA[<b>Day 18 – Villaviciosa to Gijón (29km)</b><br/>Hotel Bahia]]></description>
+      <styleUrl>#mid</styleUrl>
+      <Point><coordinates>-5.6614,43.5318,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hotel Ernan Cortes ($$$) – Gijón</name>
+      <description><![CDATA[<b>Day 18 – Villaviciosa to Gijón (29km)</b><br/>Hotel Ernan Cortes]]></description>
+      <styleUrl>#upper</styleUrl>
+      <Point><coordinates>-5.6606,43.5326,0</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

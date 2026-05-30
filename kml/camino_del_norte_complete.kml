@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Camino del Norte – Complete Route: Irún to Santiago de Compostela</name>
+    <description>Full 31-stage walking route along the northern coast of Spain. Source: Stingy Nomads (stingynomads.com)</description>
+
+    <!-- Styles -->
+    <Style id="waypointStyle">
+      <IconStyle>
+        <color>ff0000ff</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle><scale>0.9</scale></LabelStyle>
+    </Style>
+    <Style id="startStyle">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="endStyle">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="routePart1">
+      <LineStyle>
+        <color>ff0066ff</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <Style id="routePart2">
+      <LineStyle>
+        <color>ff00aa44</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+
+    <!-- PART 1 Route Line -->
+    <Placemark>
+      <name>Route – Part 1: Irún to Gijón</name>
+      <styleUrl>#routePart1</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -1.7888495,43.3381465,0
+          -1.9817051,43.318237,0
+          -2.1711360,43.2848444,0
+          -2.3523692,43.296302,0
+          -2.4962800,43.267298,0
+          -2.6808403,43.311373,0
+          -2.9348121,43.2633799,0
+          -3.1249643,43.3445112,0
+          -3.2156354,43.3688221,0
+          -3.4316509,43.4089122,0
+          -3.6349382,43.4560317,0
+          -3.9024482,43.4425958,0
+          -4.1066092,43.3873327,0
+          -4.2922535,43.3856192,0
+          -4.5402077,43.3748071,0
+          -4.7562159,43.4211483,0
+          -5.1103127,43.4644649,0
+          -5.4355748,43.4817214,0
+          -5.6609733,43.5322493,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- PART 2 Route Line -->
+    <Placemark>
+      <name>Route – Part 2: Gijón to Santiago de Compostela</name>
+      <styleUrl>#routePart2</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -5.6609733,43.5322493,0
+          -5.9742859,43.5672447,0
+          -6.2308789,43.5619191,0
+          -6.3882152,43.544652,0
+          -6.6682839,43.5450895,0
+          -6.9439096,43.5702333,0
+          -7.1026305,43.5114839,0
+          -7.3638468,43.4285755,0
+          -7.5431108,43.3448301,0
+          -7.7566100,43.1763280,0
+          -7.9810845,43.0704844,0
+          -8.1607836,42.9296884,0
+          -8.3625168,42.9045519,0
+          -8.5441729,42.8768606,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- ===== PART 1 WAYPOINTS ===== -->
+    <Folder>
+      <name>Part 1 – Irún to Gijón</name>
+
+      <Placemark>
+        <name>START – Irún</name>
+        <description><![CDATA[<b>Day 1 Start</b><br/>Starting point of the Camino del Norte.<br/>Services: Hotel, shop, restaurant, bar, pharmacy nearby at Hondarribia (4km)]]></description>
+        <styleUrl>#startStyle</styleUrl>
+        <Point><coordinates>-1.7888495,43.3381465,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 1 – San Sebastián (26km)</name>
+        <description><![CDATA[<b>Irún → San Sebastián</b><br/>Distance: 26km / 16.1 miles<br/><br/>Accommodation: PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Notable stop: Pasai Donibane at 17km (MA, hotel, ATM, supermarket, pharmacy)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-1.9817051,43.318237,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 2 – Zarautz (21.5km)</name>
+        <description><![CDATA[<b>San Sebastián → Zarautz</b><br/>Distance: 21.5km / 13.3 miles<br/><br/>Accommodation: PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Notable stop: Orio at 15.5km (PA temporarily closed, hotel)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-2.1711360,43.2848444,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 3 – Deba (22km)</name>
+        <description><![CDATA[<b>Zarautz → Deba</b><br/>Distance: 22km / 13.6 miles<br/><br/>Accommodation: MA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Notable stops: Getaria at 4km (PA, hotel), Zumaia at 9.5km (hotel, ATM)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-2.3523692,43.296302,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 4 – Markina-Xemein (25km)</name>
+        <description><![CDATA[<b>Deba → Markina-Xemein</b><br/>Distance: 25km / 15.5 miles<br/><br/>Accommodation: MA, PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-2.4962800,43.267298,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 5 – Gernika (25km)</name>
+        <description><![CDATA[<b>Markina-Xemein → Gernika</b><br/>Distance: 25km / 15.5 miles<br/><br/>Accommodation: PA (temporarily closed), hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Notable stop: Zenarruza Monastery albergue at 7km]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-2.6808403,43.311373,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 6 – Bilbao (32km)</name>
+        <description><![CDATA[<b>Gernika → Bilbao</b><br/>Distance: 32km / 19.8 miles<br/><b>⚠️ Longest Basque stage</b><br/><br/>Accommodation: MA (parroquial), PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-2.9348121,43.2633799,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 7 – Pobeña (26km river / 32km mountain)</name>
+        <description><![CDATA[<b>Bilbao → Pobeña</b><br/>Option 1 (River route): 26km / 16 miles<br/>Option 2 (Mountain route): 32km / 20 miles<br/><br/>Accommodation: MA, hotel, restaurant, bar<br/><br/>Both routes pass through Portugalete (MA, PA, hotel, full services)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-3.1249643,43.3445112,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 8 – Castro Urdiales (14km alt. / 22km official)</name>
+        <description><![CDATA[<b>Pobeña → Castro Urdiales</b><br/>Official route: 22km / 13.6 miles<br/>Alternative (shorter) route: 14km / 8.6 miles<br/><br/>Accommodation: MA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-3.2156354,43.3688221,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 9 – Laredo (30km) 🏁 Enter Cantabria</name>
+        <description><![CDATA[<b>Castro Urdiales → Laredo</b><br/>Distance: 30km / 18.6 miles<br/><b>Enter Cantabria!</b><br/><br/>Accommodation: PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-3.4316509,43.4089122,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 10 – Güemes (30km)</name>
+        <description><![CDATA[<b>Laredo → Güemes</b><br/>Distance: 30km / 18.6 miles<br/>Option 1: Coastal route via Santoña (summer only)<br/>Option 2: Inland route via Colindres<br/><br/>Accommodation: PA, hotel, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-3.6349382,43.4560317,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 11 – Santa Cruz de Bezana (25km)</name>
+        <description><![CDATA[<b>Güemes → Santa Cruz de Bezana</b><br/>Distance: 25km / 15.5 miles<br/><br/>Accommodation: PA (temporarily closed), hotel<br/>Services: Supermarket, pharmacy, restaurant, bar<br/><br/>Passes through Santander (ferry option at Somo, 14km)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-3.9024482,43.4425958,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 12 – Santillana del Mar (28km)</name>
+        <description><![CDATA[<b>Santa Cruz de Bezana → Santillana del Mar</b><br/>Distance: 28km / 17.3 miles<br/><br/>Accommodation: MA (temporarily closed), PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-4.1066092,43.3873327,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 13 – Comillas (22km)</name>
+        <description><![CDATA[<b>Santillana del Mar → Comillas</b><br/>Distance: 22km / 13.6 miles<br/><br/>Accommodation: PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-4.2922535,43.3856192,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 14 – Colombres (29km) 🏁 Enter Asturias</name>
+        <description><![CDATA[<b>Comillas → Colombres</b><br/>Distance: 29km / 18 miles<br/><b>Enter Asturias!</b><br/><br/>Accommodation: PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-4.5402077,43.3748071,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 15 – Llanes (23km)</name>
+        <description><![CDATA[<b>Colombres → Llanes</b><br/>Distance: 23km / 14.2 miles<br/><br/>Accommodation: PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-4.7562159,43.4211483,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 16 – San Esteban de Leces (34km)</name>
+        <description><![CDATA[<b>Llanes → San Esteban de Leces</b><br/>Distance: 34km / 21 miles<br/><b>⚠️ Longest stage of the whole route!</b><br/><br/>Accommodation: MA only<br/><br/>Consider stopping at Ribadesella (30.5km) instead — PA, hotel, full services]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-5.1103127,43.4644649,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 17 – Villaviciosa (33km)</name>
+        <description><![CDATA[<b>San Esteban de Leces → Villaviciosa</b><br/>Distance: 33km / 20 miles<br/><br/>Accommodation: PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Note: Priesca PA closed on Mondays]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-5.4355748,43.4817214,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 18 – Gijón (29km) – End of Part 1</name>
+        <description><![CDATA[<b>Villaviciosa → Gijón</b><br/>Distance: 29km / 18 miles<br/><b>End of Part 1 / Start of Part 2</b><br/><br/>Accommodation: PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Note: At Casquita (3.5km), left fork leads to Oviedo / Camino Primitivo]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-5.6609733,43.5322493,0</coordinates></Point>
+      </Placemark>
+
+    </Folder>
+
+    <!-- ===== PART 2 WAYPOINTS ===== -->
+    <Folder>
+      <name>Part 2 – Gijón to Santiago de Compostela</name>
+
+      <Placemark>
+        <name>Day 19 – San Martín de Laspra (31km)</name>
+        <description><![CDATA[<b>Gijón → San Martín de Laspra</b><br/>Distance: 31km / 19 miles<br/><br/>Accommodation: PA (donation)<br/><br/>Notable stop: Avilés at 25km (MA, hotel, ATM, full services)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-5.9742859,43.5672447,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 20 – Soto de Luiña (32km)</name>
+        <description><![CDATA[<b>San Martín de Laspra → Soto de Luiña</b><br/>Distance: 32km / 20 miles<br/><br/>Accommodation: MA, PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Notable stop: Cudillero at 22km (PA, hotel, ATM, full services)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-6.2308789,43.5619191,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 21 – Cadavedo (20km)</name>
+        <description><![CDATA[<b>Soto de Luiña → Cadavedo</b><br/>Distance: 20km / 12.4 miles (coastal route)<br/><br/>Accommodation: MA, PA, hotel<br/>Services: Shop, pharmacy, restaurant, bar]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-6.3882152,43.544652,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 22 – Piñera (31km)</name>
+        <description><![CDATA[<b>Cadavedo → Piñera</b><br/>Distance: 31km / 19.2 miles<br/><br/>Accommodation: MA (communal dinner and breakfast at extra cost)<br/>Services: Shop<br/><br/>Notable stop: Luarca at 16km (PA, hotel, ATM, full services)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-6.6682839,43.5450895,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 23 – Tapia de Casariego (27km coastal) / Tol (27km inland)</name>
+        <description><![CDATA[<b>Piñera → Tapia de Casariego (coastal) or Tol (inland)</b><br/>Both options: 27km / 16.7 miles<br/><br/>Coastal: Tapia de Casariego – MA, hotel, supermarket, pharmacy, restaurant, bar<br/>Inland: Tol – MA (temporarily closed), hotel, shop, restaurant<br/><br/>Both routes pass through Navia (5.5km) and La Caridad (16km)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-6.9439096,43.5702333,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 24 – Vilela (20km coastal) / Trabada (32km inland) 🏁 Enter Galicia</name>
+        <description><![CDATA[<b>Enter Galicia!</b><br/>Coastal: Tapia de Casariego → Vilela – 20km / 12.5 miles<br/>Inland: Tol → Trabada – 32km / 19.8 miles<br/><br/>Coastal stop: Ribadeo at 12km (MA, PA, hotel, full services)<br/>Vilela accommodation: PA, restaurant]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-7.1026305,43.5114839,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 25 – Mondoñedo (30km coastal / 19km inland)</name>
+        <description><![CDATA[<b>Vilela or Trabada → Mondoñedo</b><br/>Coastal route: 30km / 18.6 miles<br/>Inland route: 19km / 11.8 miles<br/><br/>Accommodation: MA, PA, hotel<br/>Services: ATM, supermarket, restaurant, bar<br/><br/>Notable stop (coastal): Vilanova de Lourenzá at 21km (MA, PA, hotel, full services)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-7.3638468,43.4285755,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 26 – Castromaior / Albergue O Xistral (23km)</name>
+        <description><![CDATA[<b>Mondoñedo → Castromaior</b><br/>Distance: 23km / 14 miles<br/><br/>Accommodation: PA (dinner and breakfast included at the albergue)<br/><br/>Notable stop: Abadín at 17km (PA, hotel, ATM, full services)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-7.5431108,43.3448301,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 27 – Baamonde (32km)</name>
+        <description><![CDATA[<b>Castromaior → Baamonde</b><br/>Distance: 32km / 20 miles<br/><br/>Accommodation: MA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Notable stop: Vilalba at 16km (MA, PA, hotel, ATM, full services)]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-7.7566100,43.1763280,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 28 – Sobrado dos Monxes (40km original / 32km new route)</name>
+        <description><![CDATA[<b>Baamonde → Sobrado dos Monxes</b><br/>Original route: 40km / 25 miles<br/>New route: 32km / 20 miles<br/><b>⚠️ Original route is the longest stage on the entire Camino!</b><br/><br/>Accommodation: MA, PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Sobrado dos Monxes has a famous Cistercian monastery]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-7.9810845,43.0704844,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 29 – Arzúa (22km)</name>
+        <description><![CDATA[<b>Sobrado dos Monxes → Arzúa</b><br/>Distance: 22km / 13.6 miles<br/><br/>Accommodation: MA, PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Arzúa is where the Camino del Norte merges with the Camino Francés]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-8.1607836,42.9296884,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Day 30 – O Pedrouzo (20km)</name>
+        <description><![CDATA[<b>Arzúa → O Pedrouzo</b><br/>Distance: 20km / 12.4 miles<br/><br/>Accommodation: MA, PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Last night before Santiago!]]></description>
+        <styleUrl>#waypointStyle</styleUrl>
+        <Point><coordinates>-8.3625168,42.9045519,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>🎉 FINISH – Santiago de Compostela (20km) Day 31</name>
+        <description><![CDATA[<b>O Pedrouzo → Santiago de Compostela</b><br/>Distance: 20km / 12.4 miles<br/><b>🎉 BUEN CAMINO! End of the Camino del Norte!</b><br/><br/>Total route: ~800km over 31 days<br/><br/>Accommodation: MA, PA, hotel<br/>Services: ATM, supermarket, pharmacy, restaurant, bar<br/><br/>Notable stop: Monte do Gozo at 15.2km — first view of the cathedral spires!]]></description>
+        <styleUrl>#endStyle</styleUrl>
+        <Point><coordinates>-8.5441729,42.8768606,0</coordinates></Point>
+      </Placemark>
+
+    </Folder>
+
+  </Document>
+</kml>
