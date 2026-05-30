@@ -103,50 +103,53 @@ def fetch_json(url, retries=3):
                 return None
 
 def fetch_historical(lat, lon, month, day):
-    """Fetch the same calendar date across CLIMATE_YEARS and return averages."""
-    all_tmax, all_tmin, all_rain, all_wind = [], [], [], []
+    """Fetch 5 years of data in ONE API call, filter to the target calendar date, average."""
+    try:
+        start = date(CLIMATE_YEARS[0],  month, day)
+        end   = date(CLIMATE_YEARS[-1], month, day)
+    except ValueError:
+        return None
 
-    for year in CLIMATE_YEARS:
-        try:
-            d = date(year, month, day)
-        except ValueError:
-            continue  # skip Feb 29 in non-leap years
-        url = (
-            f"https://archive-api.open-meteo.com/v1/archive"
-            f"?latitude={lat}&longitude={lon}"
-            f"&start_date={d}&end_date={d}"
-            f"&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max"
-            f"&timezone=Europe/Madrid"
-        )
-        data = fetch_json(url)
-        if data and "daily" in data:
-            daily = data["daily"]
-            def first(key):
-                vals = daily.get(key, [None])
-                return vals[0] if vals else None
-            tmax = first("temperature_2m_max")
-            tmin = first("temperature_2m_min")
-            rain = first("precipitation_sum")
-            wind = first("windspeed_10m_max")
-            if tmax is not None: all_tmax.append(tmax)
-            if tmin is not None: all_tmin.append(tmin)
-            if rain is not None: all_rain.append(rain)
-            if wind is not None: all_wind.append(wind)
-        time.sleep(0.4)
+    url = (
+        f"https://archive-api.open-meteo.com/v1/archive"
+        f"?latitude={lat}&longitude={lon}"
+        f"&start_date={start}&end_date={end}"
+        f"&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max"
+        f"&timezone=Europe/Madrid"
+    )
+    data = fetch_json(url)
+    if not data or "daily" not in data:
+        return None
+
+    daily  = data["daily"]
+    dates  = daily.get("time", [])
+    target = f"{month:02d}-{day:02d}"  # e.g. "06-01"
+
+    # Filter to only rows matching the target MM-DD across all years
+    indices = [i for i, d in enumerate(dates) if d[5:] == target]
+
+    def col(key):
+        return [daily[key][i] for i in indices
+                if daily.get(key) and i < len(daily[key]) and daily[key][i] is not None]
+
+    all_tmax = col("temperature_2m_max")
+    all_tmin = col("temperature_2m_min")
+    all_rain = col("precipitation_sum")
+    all_wind = col("windspeed_10m_max")
 
     def avg(lst):
         return round(sum(lst) / len(lst), 1) if lst else None
 
-    rain_prob = round(100 * sum(1 for r in all_rain if r and r > 1.0) / len(CLIMATE_YEARS)) if all_rain else None
+    rain_prob = round(100 * sum(1 for r in all_rain if r > 1.0) / len(all_rain)) if all_rain else None
 
     return {
-        "tmax": avg(all_tmax),
-        "tmin": avg(all_tmin),
-        "rain_mm": avg(all_rain),
+        "tmax":     avg(all_tmax),
+        "tmin":     avg(all_tmin),
+        "rain_mm":  avg(all_rain),
         "rain_prob": rain_prob,
         "wind_kmh": avg(all_wind),
-        "source": "historical",
-        "years": f"{CLIMATE_YEARS[0]}–{CLIMATE_YEARS[-1]}",
+        "source":   "historical",
+        "years":    f"{CLIMATE_YEARS[0]}–{CLIMATE_YEARS[-1]}",
     }
 
 def fetch_forecast(lat, lon, target_date):
