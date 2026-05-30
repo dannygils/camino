@@ -19,6 +19,9 @@ jobs:
       - name: Tally accommodation votes
         run: python3 sleep/tally-sleep.py sleep/sleep.yaml > sleep/tally-results.md
 
+      - name: Check accommodation warnings
+        run: python3 sleep/check-warnings.py sleep/sleep.yaml > sleep/warnings.md
+
       - name: Tally packing list
         run: python3 packing/tally-packing.py packing/packing-list.yaml > packing/packing-tally.md
 
@@ -26,6 +29,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sleep/tally-results.md packing/packing-tally.md
+          git add sleep/tally-results.md sleep/warnings.md packing/packing-tally.md
           git diff --cached --quiet || git commit -m "tally: update results [skip ci]"
           git push

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camino del Norte – Connectivity Guide</title>
+  <style>
+    :root {
+      --bg:      #0f1117;
+      --surface: #1a1d27;
+      --border:  #2a2d3a;
+      --text:    #e8eaf0;
+      --muted:   #8892a4;
+      --accent:  #4f9cf9;
+      --green:   #27ae60;
+      --orange:  #e67e22;
+      --red:     #e74c3c;
+      --yellow:  #f1c40f;
+      --strong:  #2ecc71;
+      --patchy:  #f39c12;
+      --weak:    #e74c3c;
+      --offline: #8892a4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      height: 44px;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background .15s, color .15s;
+    }
+    nav a:hover { background: rgba(255,255,255,.06); color: var(--text); }
+    nav a.active { background: rgba(79,156,249,.15); color: var(--accent); }
+    nav .sep { color: var(--border); margin: 0 4px; }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 32px;
+    }
+    header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    header p  { color: var(--muted); font-size: 13px; }
+
+    /* ── Layout ── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 0 32px 60px; }
+
+    /* ── Section headers ── */
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 32px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 14px; font-weight: 600; margin: 20px 0 8px; }
+
+    /* ── Summary stats ── */
+    .summary {
+      display: flex;
+      gap: 16px;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 20px;
+      min-width: 150px;
+    }
+    .stat-val   { font-size: 26px; font-weight: 700; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ── SIM card grid ── */
+    .sim-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .sim-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .sim-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+    .sim-card .sim-tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .tag-best     { background: rgba(39,174,96,.2);  color: var(--strong); border: 1px solid rgba(39,174,96,.4); }
+    .tag-coverage { background: rgba(79,156,249,.15); color: var(--accent); border: 1px solid rgba(79,156,249,.3); }
+    .tag-esim     { background: rgba(243,156,18,.15); color: var(--patchy); border: 1px solid rgba(243,156,18,.3); }
+    .sim-card p   { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .sim-card a   { color: var(--accent); text-decoration: none; font-size: 12px; }
+    .sim-card a:hover { text-decoration: underline; }
+
+    /* ── Stage table ── */
+    .table-wrap { overflow-x: auto; margin-top: 8px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+    }
+    th {
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    tr:hover td { background: rgba(255,255,255,.02); }
+
+    /* signal badge */
+    .sig {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 5px;
+    }
+    .sig-strong  { background: rgba(46,204,113,.15); color: var(--strong); border: 1px solid rgba(46,204,113,.3); }
+    .sig-patchy  { background: rgba(243,156,18,.15);  color: var(--patchy); border: 1px solid rgba(243,156,18,.3); }
+    .sig-weak    { background: rgba(231,76,60,.15);   color: var(--weak);   border: 1px solid rgba(231,76,60,.3); }
+    .sig-offline { background: rgba(136,146,164,.1);  color: var(--offline);border: 1px solid rgba(136,146,164,.2); }
+
+    /* work flag */
+    .work-flag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(231,76,60,.15);
+      color: var(--red);
+      border: 1px solid rgba(231,76,60,.3);
+      white-space: nowrap;
+    }
+    .work-ok {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(46,204,113,.1);
+      color: var(--strong);
+      border: 1px solid rgba(46,204,113,.2);
+      white-space: nowrap;
+    }
+
+    .day-num { color: var(--muted); font-size: 12px; }
+    .town-name { font-weight: 600; }
+    .region-tag {
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(255,255,255,.05);
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+    .notes-col { color: var(--muted); font-size: 12px; max-width: 260px; }
+
+    /* ── Tips box ── */
+    .tips {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 12px;
+    }
+    .tips ul { padding-left: 18px; }
+    .tips li { margin-bottom: 8px; color: var(--muted); font-size: 13px; }
+    .tips li strong { color: var(--text); }
+
+    /* ── Links grid ── */
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .link-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color .15s;
+    }
+    .link-card:hover { border-color: var(--accent); }
+    .link-card .lc-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+    .link-card .lc-sub   { font-size: 11px; color: var(--muted); }
+
+    /* ── Legend ── */
+    .legend {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 16px 0;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+    }
+    .legend span { display: flex; align-items: center; gap: 6px; }
+
+    @media (max-width: 600px) {
+      nav, header, .page { padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="weather.html">🌦️ Weather</a>
+    <span class="sep">|</span>
+    <a href="connectivity.html" class="active">📶 Connectivity</a>
+  </nav>
+
+  <header>
+    <h1>📶 Camino del Norte – Connectivity Guide</h1>
+    <p>Cell coverage, SIM recommendations &amp; remote work planning · Irún → Santiago de Compostela · June–July 2027</p>
+  </header>
+
+  <div class="page">
+
+    <!-- Summary -->
+    <div class="summary">
+      <div class="stat">
+        <div class="stat-val" style="color:var(--strong)">24</div>
+        <div class="stat-label">Stages with strong signal</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val" style="color:var(--patchy)">6</div>
+        <div class="stat-label">Stages with patchy signal</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val" style="color:var(--weak)">2</div>
+        <div class="stat-label">Stages likely weak/offline</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val" style="color:var(--accent)">4</div>
+        <div class="stat-label">Remote work caution days</div>
+      </div>
+    </div>
+
+    <!-- Overall picture -->
+    <h2>Overview</h2>
+    <div class="tips">
+      <p style="margin-bottom:12px;color:var(--text)">
+        The Camino del Norte has generally <strong>better coverage than the Camino Francés</strong>
+        because northern Spain is more densely populated and the route follows the coast and major towns.
+        Most pilgrims report no significant dead zones. The main exceptions are:
+      </p>
+      <ul>
+        <li><strong>Inland Galicia (Days 25–29)</strong> — the route turns away from the coast after Vilela and passes through very rural terrain. Mondoñedo, Castromaior, and Baamonde are the most likely weak spots.</li>
+        <li><strong>Mountain sections mid-stage</strong> — signal can drop between towns on ascents, but recovers when you reach the next settlement.</li>
+        <li><strong>Basque interior (Days 4–5)</strong> — Markina-Xemein and the Zenarruza monastery area are inland and hilly. Fine in towns, patchy on trail.</li>
+      </ul>
+    </div>
+
+    <!-- SIM cards -->
+    <h2>SIM Card Recommendations</h2>
+    <div class="sim-grid">
+      <div class="sim-card">
+        <h4>Orange Spain 🥇</h4>
+        <span class="sim-tag tag-best">Best for pilgrims</span>
+        <p>
+          Most recommended by pilgrims on the Norte. A store is right on the
+          Camino in Irún as you leave town — easy to pick up on Day 1.
+          Good rural coverage, cheap prepaid plans.
+        </p>
+        <br>
+        <a href="https://www.orange.es/tiendas/orange/irun/paseo-de-colon-33" target="_blank">→ Irún store</a>
+        &nbsp;&nbsp;
+        <a href="https://www.orange.es/cobertura" target="_blank">→ Coverage map</a>
+      </div>
+      <div class="sim-card">
+        <h4>Movistar (Telefónica)</h4>
+        <span class="sim-tag tag-coverage">Best rural coverage</span>
+        <p>
+          Largest network footprint in Spain, best coverage in remote rural areas.
+          Slightly more expensive than Orange but worth it if remote work
+          connectivity is a priority (Joel).
+        </p>
+        <br>
+        <a href="https://www.movistar.es/particulares/movil/cobertura/" target="_blank">→ Coverage map</a>
+      </div>
+      <div class="sim-card">
+        <h4>Airalo / Holafly eSIM</h4>
+        <span class="sim-tag tag-esim">eSIM option</span>
+        <p>
+          Good option if you want to set up before leaving home.
+          Runs on local Spanish networks (usually Movistar or Orange).
+          No physical SIM swap needed.
+        </p>
+        <br>
+        <a href="https://www.airalo.com/spain-esim" target="_blank">→ Airalo Spain</a>
+        &nbsp;&nbsp;
+        <a href="https://www.holafly.com/en/esim/spain-esim/" target="_blank">→ Holafly Spain</a>
+      </div>
+      <div class="sim-card">
+        <h4>T-Mobile / Google Fi (US)</h4>
+        <span class="sim-tag tag-esim">US plans</span>
+        <p>
+          T-Mobile Magenta and Google Fi both include Spain at no extra cost.
+          Convenient if you don't want a separate SIM.
+          Data speeds may be throttled after a threshold.
+        </p>
+        <br>
+        <a href="https://www.t-mobile.com/coverage/coverage-map" target="_blank">→ T-Mobile international</a>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:12px;margin-top:8px">
+      💡 No EU roaming charges within Spain — any EU SIM works at domestic rates.
+      If arriving via another EU country, you can also pick up a SIM there.
+    </p>
+
+    <!-- Stage table -->
+    <h2>Coverage by Stage</h2>
+    <p style="color:var(--muted);font-size:12px;margin-bottom:12px">
+      Based on pilgrim reports, terrain, and nPerf crowdsourced signal data.
+      Ratings reflect coverage <em>at the stage endpoint town</em> — signal on trail between towns may vary.
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Town</th>
+            <th>Region</th>
+            <th>Signal</th>
+            <th>4G</th>
+            <th>Remote work</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- BASQUE COUNTRY -->
+          <tr>
+            <td class="day-num">Day 0</td>
+            <td class="town-name">Irún</td>
+            <td><span class="region-tag">Basque</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Border town, full services. Pick up Orange SIM here.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 1</td>
+            <td class="town-name">San Sebastián</td>
+            <td><span class="region-tag">Basque</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅ 5G</td>
+            <td><span class="work-ok">✓ Excellent</span></td>
+            <td class="notes-col">Major city, excellent connectivity throughout.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 2</td>
+            <td class="town-name">Zarautz</td>
+            <td><span class="region-tag">Basque</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Coastal town, reliable signal.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 3</td>
+            <td class="town-name">Deba</td>
+            <td><span class="region-tag">Basque</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Town on the coast, good signal.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 4</td>
+            <td class="town-name">Markina-Xemein</td>
+            <td><span class="region-tag">Basque</span></td>
+            <td><span class="sig sig-patchy">●&nbsp; Patchy</span></td>
+            <td>⚠️</td>
+            <td><span class="work-flag">⚠ Plan ahead</span></td>
+            <td class="notes-col">Inland valley town. Good in town centre, weak on the surrounding trail sections.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 5</td>
+            <td class="town-name">Gernika</td>
+            <td><span class="region-tag">Basque</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Major Basque town, reliable 4G.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 6</td>
+            <td class="town-name">Bilbao</td>
+            <td><span class="region-tag">Basque</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅ 5G</td>
+            <td><span class="work-ok">✓ Excellent</span></td>
+            <td class="notes-col">Major city. Best connectivity of the whole route. Good rest day for Joel to catch up on work.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 7</td>
+            <td class="town-name">Pobeña</td>
+            <td><span class="region-tag">Basque</span></td>
+            <td><span class="sig sig-patchy">●&nbsp; Patchy</span></td>
+            <td>⚠️</td>
+            <td><span class="work-flag">⚠ Plan ahead</span></td>
+            <td class="notes-col">Very small settlement. Better signal 1km away in La Arena.</td>
+          </tr>
+
+          <!-- CANTABRIA -->
+          <tr>
+            <td class="day-num">Day 8</td>
+            <td class="town-name">Castro Urdiales</td>
+            <td><span class="region-tag">Cantabria</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Coastal town, reliable signal.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 9</td>
+            <td class="town-name">Laredo</td>
+            <td><span class="region-tag">Cantabria</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Beach town, well-connected.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 10</td>
+            <td class="town-name">Güemes</td>
+            <td><span class="region-tag">Cantabria</span></td>
+            <td><span class="sig sig-patchy">●&nbsp; Patchy</span></td>
+            <td>⚠️</td>
+            <td><span class="work-flag">⚠ Plan ahead</span></td>
+            <td class="notes-col">Small rural village. Santander (15km back) has excellent connectivity if needed.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 11</td>
+            <td class="town-name">Santa Cruz de Bezana</td>
+            <td><span class="region-tag">Cantabria</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Suburban Santander area, good coverage.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 12</td>
+            <td class="town-name">Santillana del Mar</td>
+            <td><span class="region-tag">Cantabria</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Tourist town, well-served.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 13</td>
+            <td class="town-name">Comillas</td>
+            <td><span class="region-tag">Cantabria</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Coastal town, solid signal.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 14</td>
+            <td class="town-name">Colombres</td>
+            <td><span class="region-tag">Cantabria</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Border with Asturias, good coverage.</td>
+          </tr>
+
+          <!-- ASTURIAS -->
+          <tr>
+            <td class="day-num">Day 15</td>
+            <td class="town-name">Llanes</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Popular coastal town, reliable 4G.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 16</td>
+            <td class="town-name">San Esteban de Leces</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-patchy">●&nbsp; Patchy</span></td>
+            <td>⚠️</td>
+            <td><span class="work-flag">⚠ Plan ahead</span></td>
+            <td class="notes-col">Albergue-only hamlet. Consider stopping in Ribadesella (30.5km) instead — good 4G there.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 17</td>
+            <td class="town-name">Villaviciosa</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Town centre well-covered.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 18</td>
+            <td class="town-name">Gijón</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅ 5G</td>
+            <td><span class="work-ok">✓ Excellent</span></td>
+            <td class="notes-col">Major city. Second best connectivity stop after Bilbao. Good rest day for work.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 19</td>
+            <td class="town-name">San Martín de Laspra</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Avilés suburban area, good coverage.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 20</td>
+            <td class="town-name">Soto de Luiña</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Small town but on main coastal road, covered.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 21</td>
+            <td class="town-name">Cadavedo</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Coastal village, decent 4G.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 22</td>
+            <td class="town-name">Piñera</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-patchy">●&nbsp; Patchy</span></td>
+            <td>⚠️</td>
+            <td><span class="work-flag">⚠ Plan ahead</span></td>
+            <td class="notes-col">Tiny village. Luarca (16km back) has good signal — plan any work calls before arriving.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 23</td>
+            <td class="town-name">Tapia de Casariego</td>
+            <td><span class="region-tag">Asturias</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Last decent-sized Asturian coastal town before Galicia.</td>
+          </tr>
+
+          <!-- GALICIA -->
+          <tr>
+            <td class="day-num">Day 24</td>
+            <td class="town-name">Vilela</td>
+            <td><span class="region-tag">Galicia</span></td>
+            <td><span class="sig sig-patchy">●&nbsp; Patchy</span></td>
+            <td>⚠️</td>
+            <td><span class="work-flag">⚠ Plan ahead</span></td>
+            <td class="notes-col">Hamlet. Ribadeo (12km back into stage) has solid 4G — stock up on work time there.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 25</td>
+            <td class="town-name">Mondoñedo</td>
+            <td><span class="region-tag">Galicia</span></td>
+            <td><span class="sig sig-patchy">●&nbsp; Patchy</span></td>
+            <td>⚠️</td>
+            <td><span class="work-flag">⚠ Plan ahead</span></td>
+            <td class="notes-col">Inland historic town. Coverage in the centre but surrounding hills cause drop-outs. Movistar performs best here.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 26</td>
+            <td class="town-name">Castromaior</td>
+            <td><span class="region-tag">Galicia</span></td>
+            <td><span class="sig sig-weak">●&nbsp; Weak</span></td>
+            <td>❌</td>
+            <td><span class="work-flag">🔴 Avoid work</span></td>
+            <td class="notes-col">Isolated forest albergue. Very limited signal. Plan for offline day. Abadín (17km into stage) marginally better.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 27</td>
+            <td class="town-name">Baamonde</td>
+            <td><span class="region-tag">Galicia</span></td>
+            <td><span class="sig sig-patchy">●&nbsp; Patchy</span></td>
+            <td>⚠️</td>
+            <td><span class="work-flag">⚠ Plan ahead</span></td>
+            <td class="notes-col">Small rural town. Vilalba (16km into stage) has better connectivity — good stop for calls.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 28</td>
+            <td class="town-name">Sobrado dos Monxes</td>
+            <td><span class="region-tag">Galicia</span></td>
+            <td><span class="sig sig-weak">●&nbsp; Weak</span></td>
+            <td>❌</td>
+            <td><span class="work-flag">🔴 Avoid work</span></td>
+            <td class="notes-col">Remote monastery town. Very limited connectivity. Plan for offline evening. Worth it for the experience though.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 29</td>
+            <td class="town-name">Arzúa</td>
+            <td><span class="region-tag">Galicia</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Larger town, joins Camino Francés here. Connectivity improves significantly.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 30</td>
+            <td class="town-name">O Pedrouzo</td>
+            <td><span class="region-tag">Galicia</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅</td>
+            <td><span class="work-ok">✓ Good</span></td>
+            <td class="notes-col">Last stop before Santiago, well-connected.</td>
+          </tr>
+          <tr>
+            <td class="day-num">Day 31</td>
+            <td class="town-name">Santiago de Compostela</td>
+            <td><span class="region-tag">Galicia</span></td>
+            <td><span class="sig sig-strong">●&nbsp; Strong</span></td>
+            <td>✅ 5G</td>
+            <td><span class="work-ok">✓ Excellent</span></td>
+            <td class="notes-col">Major city, excellent connectivity. Well deserved rest!</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Remote work section -->
+    <h2>📻 Remote Work Planning (Joel)</h2>
+    <div class="tips">
+      <h3 style="margin-top:0">Days to plan around</h3>
+      <ul>
+        <li><strong>Day 26 – Castromaior</strong> &amp; <strong>Day 28 – Sobrado dos Monxes:</strong> Plan these as offline days. Download everything the night before in Mondoñedo or Baamonde.</li>
+        <li><strong>Days 24–25 (Vilela, Mondoñedo):</strong> Patchy. Schedule calls for midday when you can stop in a town centre café.</li>
+        <li><strong>Best work days:</strong> Bilbao (Day 6), Gijón (Day 18), and Santiago (Day 31) all have 5G and are natural rest-day candidates.</li>
+        <li><strong>Backup plan:</strong> Hotel WiFi is generally reliable throughout — the signal ratings above are for mobile data. Most hotels will have broadband.</li>
+      </ul>
+      <h3>Recommended setup</h3>
+      <ul>
+        <li><strong>SIM:</strong> Movistar prepaid for best rural Galician coverage. Pick up in Bilbao if not Irún.</li>
+        <li><strong>Offline tools:</strong> Download Maps.me or OsmAnd offline maps for Galicia before Day 24. Cache any work documents locally.</li>
+        <li><strong>Hotspot:</strong> Consider a dedicated mobile hotspot device so others aren't draining your phone battery for connectivity.</li>
+        <li><strong>Spain work visa:</strong> Ensure this is sorted before departure — see <code>packing/packing-list.yaml</code>.</li>
+      </ul>
+    </div>
+
+    <!-- Coverage checker links -->
+    <h2>Live Coverage Checkers</h2>
+    <p style="color:var(--muted);font-size:12px;margin-bottom:4px">Check signal quality at any specific point along the route before you go.</p>
+    <div class="links-grid">
+      <a class="link-card" href="https://www.nperf.com/en/map/ES/-/-./signal" target="_blank">
+        <div class="lc-title">nPerf Spain</div>
+        <div class="lc-sub">Real-world signal map, all carriers</div>
+      </a>
+      <a class="link-card" href="https://www.orange.es/cobertura" target="_blank">
+        <div class="lc-title">Orange Coverage</div>
+        <div class="lc-sub">Official Orange Spain map</div>
+      </a>
+      <a class="link-card" href="https://www.movistar.es/particulares/movil/cobertura/" target="_blank">
+        <div class="lc-title">Movistar Coverage</div>
+        <div class="lc-sub">Official Telefónica map</div>
+      </a>
+      <a class="link-card" href="https://www.vodafone.es/c/tiendas-cobertura/" target="_blank">
+        <div class="lc-title">Vodafone Coverage</div>
+        <div class="lc-sub">Official Vodafone Spain map</div>
+      </a>
+      <a class="link-card" href="https://www.opensignal.com/networks/spain" target="_blank">
+        <div class="lc-title">OpenSignal Spain</div>
+        <div class="lc-sub">Crowdsourced speed & availability</div>
+      </a>
+      <a class="link-card" href="https://www.cellmapper.net/map?MCC=214&MNC=7" target="_blank">
+        <div class="lc-title">CellMapper Spain</div>
+        <div class="lc-sub">Tower locations &amp; coverage</div>
+      </a>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+      <span><span class="sig sig-strong" style="font-size:11px">●&nbsp; Strong</span> Reliable 4G in town, consistent signal</span>
+      <span><span class="sig sig-patchy" style="font-size:11px">●&nbsp; Patchy</span> Variable — good in centre, may drop on trail</span>
+      <span><span class="sig sig-weak" style="font-size:11px">●&nbsp; Weak</span> Limited signal, plan for offline</span>
+    </div>
+
+  </div><!-- /page -->
+
+</body>
+</html>
