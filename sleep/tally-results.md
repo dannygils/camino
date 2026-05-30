@@ -1,6 +1,6 @@
 # Camino del Norte – Accommodation Vote Tally
 
-_Last updated: 2026-05-30 15:07 UTC_
+_Last updated: 2026-05-30 15:31 UTC_
 
 **1** decided &nbsp;|&nbsp; **0** needs consensus &nbsp;|&nbsp; **31** no votes yet &nbsp;|&nbsp; **32** total stages
 
