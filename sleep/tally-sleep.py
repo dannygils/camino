@@ -37,7 +37,7 @@ for block in day_blocks:
     total_days += 1
     votes_raw = votes_match.group(1)
     votes = {}
-    for line in votes_raw.strip().splitlines():
+    for line in votes_raw.splitlines():
         m = re.match(r'\s+(\w+):\s*(.*)', line)
         if m:
             votes[m.group(1)] = m.group(2).strip() or None
