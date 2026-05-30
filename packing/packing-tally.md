@@ -1,8 +1,8 @@
 # Camino del Norte – Packing List Tally
 
-_Last updated: 2026-05-30 15:31 UTC_
+_Last updated: 2026-05-30 15:43 UTC_
 
-**0** items with at least one response &nbsp;|&nbsp; **60** total items
+**2** items with at least one response &nbsp;|&nbsp; **60** total items
 
 ### ⚠️ Needs coordination — shared item, nobody confirmed yet
 - toiletries / laundry detergent
